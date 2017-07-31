@@ -47,8 +47,8 @@ const greetScreen = function(req, res){
           req.flash('error', 'User already greeted!');
         }
   }
-  greetedUsers.push(user);
   countGreeted = uniqueList.length;
+  greetedUsers.push(user);
   var myChoice = req.body.selectedRadio + ', '+user;
     res.render('myusers/greet', {output: myChoice, countGreeted: countGreeted});
     //res.send('Hello, '+user +'!');
