@@ -81,7 +81,8 @@ var greetUsers = greetUsers();
 
 
 
- const port = 5000;
- app.listen(process.env.PORT || port, function(){
-   console.log("Web app started on port: "+port);
+ app.set('port',(process.env.PORT || 5000) );
+
+ app.listen(app.get('port'), function(){
+   console.log("Web app started on port: ", app.get('port'));
  });
