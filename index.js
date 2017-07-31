@@ -19,7 +19,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017/test', function(err, db){
 
 });
 
-<<<<<<< HEAD
+
 //Add data to DB
 MongoClient.connect('mongodb://127.0.0.1:27017/test', function(err, db) {
     if(err) throw err;
@@ -51,9 +51,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017/test', function(err, db) {
         db.close();
     });
 });
-=======
 
->>>>>>> 4c18dbd87ce08521d886c2f59404257095155365
 
  app.engine('handlebars', exphbs({defaultLayout: 'main'}));
  app.set('view engine', 'handlebars');
