@@ -73,7 +73,7 @@ var greetUsers = greetUsers();
  // app.get('/', function(req, res){
  //   res.send('LetsGreet');
  // });
-// app.get('/greetings', greetUsers.index);
+ app.get('/greetings', greetUsers.index);
  app.get('/', greetUsers.greetScreen);
  app.get('/greeted', greetUsers.greeted);
  app.get('/counter/:user', greetUsers.countGreetings);
