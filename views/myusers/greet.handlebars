@@ -1,25 +1,29 @@
-<h1>Greetings webapp</h1>
-
-
-<form class="" action="/greetings" method="post">
-  <input type="text" name="user" placeholder="Type your name here">
-  <h2 id="keepTrk" name='greetCount' value=0>0
-
-</h2>
-  <div class="radio">
-    English<input type="radio" name="selectedRadio" value="Hello">
-    Afrikaans<input type="radio" name="selectedRadio" value="Hallo">
-    IsiXhosa<input type="radio" name="selectedRadio" value="Molo">
+<!-- INPUT DATA  -->
+<div class="container  text-right">
+  <a href="/greeted" class="btn btn-success btn-sm" role="button">Greeted</a>
 </div>
-  <input type="submit"  value="Greet Me">
-</form>
 
-{{#if messages.error }}
-<div class="error">
-  {{messages.error}}
-</div>
-{{/if}}
+  <form class="text-center" action="/greetings" method="post">
+    <input type="text" class="form-control tex-center" name="user" placeholder="Type your name here">
+    <h2 id="keepTrk" class="text-success" name='greetCount' value=0>{{countGreeted}}
 
-{{#if output}}
-  <p>{{output}}</p>
-{{/if}}
+    </h2>
+    <div class="text-center">
+      <div class="radio">
+        English<input type="radio" name="selectedRadio" value="Hello">
+        Afrikaans<input type="radio" name="selectedRadio" value="Goie more">
+        IsiXhosa<input type="radio" name="selectedRadio" value="Molo">
+      </div>
+    </div>
+    <input type="submit" class="btn btn-danger text-center" value="Greet Me">
+  </form>
+
+  {{#if messages.error }}
+  <div class="error text-center">
+    {{messages.error}}
+  </div>
+  {{/if}}
+
+  {{#if output}}
+  <p class="text-center">{{output}}</p>
+  {{/if}}

@@ -11,11 +11,15 @@ module.exports = function(){
 
 var greetedUsers = [];
 var uniqueList = [];
+var countGreeted = 0;
 
 const index = function(req, res){
   res.render('myusers/index');
 };
-
+var convertText = function(name){
+    var userName = name.substring(0,1).toUpperCase() +""+name.substring(1).toLowerCase()
+    return userName;
+};
 /////////////////////GREET SCREEN PAGE////////////////////////////
 const greetScreen = function(req, res){
   res.render("myusers/greet");
@@ -26,6 +30,7 @@ const greetScreen = function(req, res){
   const greet = function(req, res){
   //  res.send('Greet a user');
   var user = req.body.user;
+  user = convertText(user);
   var foundUser = uniqueList.find(function(currentUser){
     return currentUser === user;
   });
@@ -43,8 +48,9 @@ const greetScreen = function(req, res){
         }
   }
   greetedUsers.push(user);
+  countGreeted = uniqueList.length;
   var myChoice = req.body.selectedRadio + ', '+user;
-    res.render('myusers/greet', {output: myChoice});
+    res.render('myusers/greet', {output: myChoice, countGreeted: countGreeted});
     //res.send('Hello, '+user +'!');
     console.log(req.body.selectedRadio);
   }
@@ -53,6 +59,7 @@ const greetScreen = function(req, res){
   const countGreetings = function(req, res){
     var count = 0;
     var user = req.params.user;
+    user = convertText(user);
       for (var i = 0; i < greetedUsers.length; i++) {
         if (user === greetedUsers[i]) {
           count++;

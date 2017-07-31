@@ -4,8 +4,8 @@ html, body {
    padding: 0;
 
  }
- .container {
-  max-width: 500px;
+ .cover {
+  width: 800px;
   margin: 50px auto;
   padding: 0 10px;
   background-color: #14213D;
@@ -19,20 +19,6 @@ html, body {
 
 }
 
-.places {
-  margin: 50px auto;
-  padding: 20px 0px 0px 0px;
-  width: 50%;
-  border-style: solid;
-  border-top-width: 5px;
-  border-color: #14213D;
-  border: 2px solid #FFF;
-  border-radius: 10px;
-  background-color: #FFF;
-  color: #FFF;
-  background-image: -webkit-linear-gradient(#FFD194, #BC1324);
-
-}
 h1{
   text-align: center;
   color: firebrick;
@@ -42,18 +28,11 @@ h1{
   padding: 14px;
 
 }
-p {
-  align-content:  center;
-    margin: 0 auto;
-  text-align-last: center;
-  display: block;
-  color: #FFF;
-}
+
 .error{
   color: #FFF;
-  text-align-last: center;
-
 }
+
 .choose{
   align-content:  center;
   margin: 1.5% auto;
@@ -63,10 +42,10 @@ p {
 }
 h1{
   align-content:  center;
-    margin: 5% auto;
+    margin: 0 auto;
   text-align-last: center;
   display: block;
-  color: #FFF;
+  color: #FFF !important;
 }
 h2{
   margin: 1.5% auto;
@@ -76,37 +55,27 @@ h2{
   font-size: 30px;
 }
 input[type='text'] {
-
-  align-content:  center;
-  width:225px;
-  display: block;
-  margin: 0% auto;
-  resize: none;
-  text-align: center;
+  width:260px;
+  margin: 0 33%;
 
 }
 
 input[type='submit'] {
   display: inline-block;
-  width:100px;
-  margin: 5% 40%;
-  align: center;
-  cursor: pointer;
-  background-color: #BC1324;
-  color: #FFF;
-  font-family: 'Amatic SC', cursive;
-  font-size: 15px;
-  padding: 7px;
-  border-radius: 15px;
-  background-image: -webkit-linear-gradient(#FFD194, #BC1324);
+  width:25%;
+  margin: 5% auto;
 }
 .radio{
   align-content:  center;
   display:inline;
   margin: 15% auto;
   width:20px;
-  margin-left:135px;
 }
 .keepTrk{
-    margin-right: 10px;
+    margin-right: 40px;
+    color: #fff !important;
+}
+p{
+  color: #FFF;
+  font-size: 40px;
 }
