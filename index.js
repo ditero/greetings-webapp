@@ -8,16 +8,16 @@
 
  const app = express();
 
-// // Connect to Mongoose
-// MongoClient.connect('mongodb://127.0.0.1:27017/test', function(err, db){
-//   if (err) {
-//     throw err;
-//   }else {
-//     console.log("successfully connected to the database");
-//   }
-//   db.close();
-//
-// });
+// Connect to Mongoose MLAB
+MongoClient.connect('mongodb://admin:admin123@ds129023.mlab.com:29023/greetednames', function(err, db){
+  if (err) {
+    throw err;
+  }else {
+    console.log("successfully connected to the database");
+  }
+  db.close();
+
+});
 
 
 // //Add data to DB

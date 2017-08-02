@@ -30,12 +30,14 @@ const greetScreen = function(req, res){
   const greet = function(req, res){
   //  res.send('Greet a user');
   var user = req.body.user;
+  var selectedRadio = req.body.selectedRadio;
+  var myChoice = selectedRadio + ', '+user;
   user = convertText(user);
   var foundUser = uniqueList.find(function(currentUser){
     return currentUser === user;
   });
-  if (!user) {
-    req.flash('error', 'Name cannot be blank');
+  if (!user || !selectedRadio) {
+    req.flash('error', 'Input field required');
 
   }
   else {
@@ -43,13 +45,13 @@ const greetScreen = function(req, res){
         if (!foundUser) {
           uniqueList.push(user);
         }
-        else {
-          req.flash('error', 'User already greeted!');
-        }
+        // else {
+        //   req.flash('error', 'User already greeted!');
+        // }
   }
+
   countGreeted = uniqueList.length;
   greetedUsers.push(user);
-  var myChoice = req.body.selectedRadio + ', '+user;
     res.render('myusers/greet', {output: myChoice, countGreeted: countGreeted});
     //res.send('Hello, '+user +'!');
     console.log(req.body.selectedRadio);
