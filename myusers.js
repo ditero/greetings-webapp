@@ -36,8 +36,9 @@ const greetScreen = function(req, res){
   var foundUser = uniqueList.find(function(currentUser){
     return currentUser === user;
   });
-  if (!user || !selectedRadio) {
+  if (!user || selectedRadio === undefined) {
     req.flash('error', 'Input field required');
+    res.redirect('/');
 
   }
   else {

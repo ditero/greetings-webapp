@@ -5,7 +5,7 @@
  const session = require('express-session');
  var greetUsers = require('./myusers');
  var MongoClient = require('mongodb').MongoClient, format = require('util').format;
-
+ const mongoUrl = 'mongodb://127.0.0.1:27017/greetDB';
  const app = express();
 
 // Connect to Mongoose MLAB
