@@ -3,10 +3,10 @@
  const bodyParser = require('body-parser');
  const flash = require('express-flash');
  const session = require('express-session');
- const mongoURL = process.env.MONGO_DB_URL || "'mongodb://localhost/test'";
+ const mongoURL = process.env.MONGO_DB_URL || "'mongodb://localhost/greetDB'";
 
-mongoose.connect(mongoURL);
- //const mongoUrl = 'mongodb://admin:admin123@ds129023.mlab.com:29023/greetednames';
+//mongoose.connect(mongoURL);
+ const mongoUrl = 'mongodb://admin:admin123@ds129023.mlab.com:29023/greetednames';
 
  const GreetUsersRoutes = require('./myusers');
  const Models = require('./models');
