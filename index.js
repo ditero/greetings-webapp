@@ -6,15 +6,15 @@
  const mongoURL = process.env.MONGO_DB_URL || "'mongodb://localhost/greetDB'";
 
 //mongoose.connect(mongoURL);
- const mongoUrl = 'mongodb://admin:admin123@ds129023.mlab.com:29023/greetednames';
+ //const mongoUrl = 'mongodb://admin:admin123@ds129023.mlab.com:29023/greetednames';
 
  const GreetUsersRoutes = require('./myusers');
  const Models = require('./models');
 
- const models = Models(mongoUrl);
+ const models = Models(mongoURL);
 
  //Instantiate the routes
- const greetUsersRoutes = GreetUsersRoutes(models);
+ const greetUsersRoutes = GreetUsersRoutes();
 
  var MongoClient = require('mongodb').MongoClient, format = require('util').format;
  const app = express();
