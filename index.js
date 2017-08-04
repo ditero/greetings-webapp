@@ -14,7 +14,7 @@
  const models = Models(mongoURL);
 
  //Instantiate the routes
- const greetUsersRoutes = GreetUsersRoutes();
+ const greetUsersRoutes = GreetUsersRoutes(models);
 
  var MongoClient = require('mongodb').MongoClient, format = require('util').format;
  const app = express();
