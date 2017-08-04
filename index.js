@@ -3,9 +3,20 @@
  const bodyParser = require('body-parser');
  const flash = require('express-flash');
  const session = require('express-session');
- var greetUsers = require('./myusers');
+ const mongoURL = process.env.MONGO_DB_URL || "'mongodb://localhost/test'";
+
+mongoose.connect(mongoURL);
+ //const mongoUrl = 'mongodb://admin:admin123@ds129023.mlab.com:29023/greetednames';
+
+ const GreetUsersRoutes = require('./myusers');
+ const Models = require('./models');
+
+ const models = Models(mongoUrl);
+
+ //Instantiate the routes
+ const greetUsersRoutes = GreetUsersRoutes(models);
+
  var MongoClient = require('mongodb').MongoClient, format = require('util').format;
- const mongoUrl = 'mongodb://127.0.0.1:27017/greetDB';
  const app = express();
 
 // Connect to Mongoose MLAB
@@ -67,17 +78,15 @@ app.use(bodyParser.json());
 // Use the session middleware
 app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 * 30}}));
 app.use(flash());
-//Instantiate the routes
-var greetUsers = greetUsers();
 
  // app.get('/', function(req, res){
  //   res.send('LetsGreet');
  // });
- app.get('/greetings', greetUsers.index);
- app.get('/', greetUsers.greetScreen);
- app.get('/greeted', greetUsers.greeted);
- app.get('/counter/:user', greetUsers.countGreetings);
- app.post('/greetings', greetUsers.greet);
+ app.get('/greetings', greetUsersRoutes.index);
+ app.get('/', greetUsersRoutes.greetScreen);
+ app.get('/greeted', greetUsersRoutes.greeted);
+ app.get('/counter/:user', greetUsersRoutes.countGreetings);
+ app.post('/greetings', greetUsersRoutes.greet);
 
 
 

@@ -1,5 +1,5 @@
 'use strict'
-module.exports = function(){
+module.exports = function(models){
 
 ///////////GETUSER FUNCTION: RETUNRS THE VARIABLE <USER>/////////
   function getUser(req, res){
