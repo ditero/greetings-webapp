@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 module.exports = function(mongoURL){
   mongoose.connect(mongoURL);
 
-  const Users = mongoose.model('Users', {name:"String"});
+  const UsersSchema = mongoose.Schema({name : String});
+  UsersSchema.index({name : 1}, {unique : true});
+
+  const Users = mongoose.model('Users', UsersSchema);
 
   return {
     Users

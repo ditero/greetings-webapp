@@ -1,8 +1,22 @@
-<h4>Greeted Users</h4>
 <a href="/">Greet Someone</a>
+<table class = "table table-condensed">
+<thead>
+      <tr>
+         <!-- <th>#</th> -->
+         <th>Greeted Names</th>
+      </tr>
+   </thead>
 
-<ul class="">
-  {{#each myusers}}
-  <a href="counter/{{this}}"><li>{{this}}</li></a>
-  {{/each}}
-</ul>
+   <tbody>
+
+     {{#each myusers}}
+      <tr class = "success">
+         <td>
+           <a href="counter/{{this}}">{{this}}</a>
+           </td>
+      </tr>
+      {{/each}}
+
+   </tbody>
+
+ </table>

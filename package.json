@@ -17,7 +17,7 @@
     "express-session": "^1.15.3",
     "express3-handlebars": "^0.5.2",
     "mocha": "^3.4.2",
-    "mongodb": "*",
+    "mongodb": "^2.2.30",
     "mongoose": "^4.11.5"
   }
 }

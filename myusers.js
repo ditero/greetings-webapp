@@ -14,7 +14,8 @@ var uniqueList = [];
 var countGreeted = 0;
 
 const index = function(req, res){
-  res.render('myusers/index');
+  var countGreeted = uniqueList.length;
+  res.render('myusers/index', {countGreeted: countGreeted});
 };
 var convertText = function(name){
     var userName = name.substring(0,1).toUpperCase() +""+name.substring(1).toLowerCase()
@@ -27,14 +28,15 @@ const greetScreen = function(req, res){
 };
 
 //////GREET FUNCTION: RESPONDS AND PUSHES NAMES TO AN ARRAY///////
-  const greet = function(req, res){
-  //  res.send('Greet a user');
-  var user = req.body.user;
+  const greet = function(req, res, next){
+  var user = {
+    name: req.body.user
+  };
+
   var selectedRadio = req.body.selectedRadio;
-  var myChoice = selectedRadio + ', '+user;
-  user = convertText(user);
+  var myChoice = selectedRadio + ', '+user.name;
   var foundUser = uniqueList.find(function(currentUser){
-    return currentUser === user;
+    return currentUser === user.name;
   });
   if (!user || selectedRadio === undefined) {
     req.flash('error', 'Input field required');
@@ -42,21 +44,26 @@ const greetScreen = function(req, res){
 
   }
   else {
-
+        models.Users.create(user, function(err, results){
+          if (err) {
+            if (err.code === 11000) {
+              // req.flash('error', 'Welcome back');
+            }
+            else {
+              return next(err);
+            }
+          }
+        });
         if (!foundUser) {
-          uniqueList.push(user);
+          uniqueList.push(user.name);
         }
-        // else {
-        //   req.flash('error', 'User already greeted!');
-        // }
   }
 
   countGreeted = uniqueList.length;
-  greetedUsers.push(user);
+  greetedUsers.push(user.name);
     res.render('myusers/greet', {output: myChoice, countGreeted: countGreeted});
-    //res.send('Hello, '+user +'!');
-    console.log(req.body.selectedRadio);
-  }
+
+  } //End Of Greet Function
 
 /////////////COUNTGREETINGS FUNCTION: COUNTS HOW TIMES A USER HAS BEEN GREETED///////
   const countGreetings = function(req, res){
@@ -68,21 +75,22 @@ const greetScreen = function(req, res){
           count++;
         }
       }
-      res.send('Hello, '+user + ' is greeted for the ' + count +' times');
+      var thisUser = 'Hello, '+user + ' is greeted for the ' + count +' time(s)'
+      res.render('myusers/countGreetings', {thisUser: thisUser});
 
 
   }
 
   ////////////////GREETED FUNCTION: RESPONDS WITH THE LIST OF GREETED USERS THAT HAVE LINKS/////
-  const greeted = function(req, res){
-    //greetedUsers.forEach(function());
-    var list = [];
-    var user = getUser(req, res);
-
-    // uniqueList.forEach(function(user){
-    //   list.push("<a href= counter/" + user + ">" + user + "</a>");
-    // });
-
+  const greeted = function(req, res, next){
+    models.Users.find({})
+    .exec(function(err, results){
+      if (err) {
+        return next(err);
+      }else {
+        console.log(results);
+      }
+    });
     res.render('myusers/index',{myusers: uniqueList});
 
   }

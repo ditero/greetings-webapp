@@ -42,17 +42,18 @@ h1{
 }
 h1{
   align-content:  center;
-    margin: 0 auto;
+  margin: 0 auto;
   text-align-last: center;
   display: block;
   color: #FFF !important;
 }
 h2{
-  margin: 1.5% auto;
+  margin-right: 25%;
   text-align: right;
   display: block;
-  color: #FFF;
+  color: #FFF !important;
   font-size: 30px;
+  border-bottom: 100%;
 }
 input[type='text'] {
   width:260px;
@@ -73,7 +74,7 @@ input[type='submit'] {
 }
 .keepTrk{
     margin-right: 40px;
-    color: #fff !important;
+    color: #FFF !important;
 }
 p{
   color: #FFF;

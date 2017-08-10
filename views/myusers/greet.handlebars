@@ -1,29 +1,36 @@
 <!-- INPUT DATA  -->
-<div class="container  text-right">
-  <a href="/greeted" class="btn btn-success btn-sm" role="button">Greeted</a>
-</div>
 
-  <form class="text-center" action="/greetings" method="post">
-    <input type="text" class="form-control tex-center" name="user" placeholder="Type your name here">
-    <h2 id="keepTrk" class="text-success" name='greetCount' value=0>{{countGreeted}}
+<form class="text-center" action="/greetings" method="post">
+  <input type="text" class="form-control tex-center" name="user" placeholder="Type your name here">
+  <h2 id="keepTrk" class="panel-primary" name='greetCount' value=0>{{countGreeted}}</h2>
 
-    </h2>
-    <div class="text-center">
-      <div class="radio">
-        English<input type="radio" name="selectedRadio" value="Hello">
-        Afrikaans<input type="radio" name="selectedRadio" value="Goie more">
-        IsiXhosa<input type="radio" name="selectedRadio" value="Molo">
-      </div>
+  <div class="text-center">
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary">
+    <input type="radio" name="selectedRadio" id="option1" name="selectedRadio" value="Hello">English
+  </label>
+      <label class="btn btn-primary">
+    <input type="radio" name="selectedRadio" id="option2" name="selectedRadio" value="Goe more"> Afrikaans
+  </label>
+      <label class="btn btn-primary">
+    <input type="radio" name="selectedRadio" id="option3" name="selectedRadio" value="Molo"> IsiXhosa
+  </label>
     </div>
-    <input type="submit" class="btn btn-danger text-center" value="Greet Me">
-  </form>
+  </div>
 
-  {{#if messages.error }}
+  <div class="2btn-group">
+    <input type="submit" class="btn btn-success text-center" value="Greet Me">
+    <a href="/greeted"><input class="btn btn-success text-center" value="View greeted Names"></a>
+  </div>
+
+</form>
+
+{{#if messages.error }}
   <div class="error text-center">
     {{messages.error}}
   </div>
-  {{/if}}
+{{/if}}
 
-  {{#if output}}
+{{#if output}}
   <p class="text-center">{{output}}</p>
-  {{/if}}
+{{/if}}
