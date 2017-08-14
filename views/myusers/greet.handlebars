@@ -1,16 +1,19 @@
 <!-- INPUT DATA  -->
 
-<form class="text-center" action="/greetings" method="post">
-  <input type="text" class="form-control tex-center" name="user" placeholder="Type your name here">
+<div id="countPanel">
   <h2 id="keepTrk" class="panel-primary" name='greetCount' value=0>{{countGreeted}}</h2>
+  <a href="/resetCounter"><input type="button" id="resetBtn" class="btn btn-secondary" name="resetBtn" value="Reset Count" readonly="readonly">
+</a></div>
 
-  <div class="text-center">
+<form class="text-center" action="/greetings" method="post">
+  <div id="mainOptions" class="text-center">
+    <input  type="text" class="form-control tex-center" name="user" placeholder="Type your name here">
     <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary">
     <input type="radio" name="selectedRadio" id="option1" name="selectedRadio" value="Hello">English
   </label>
       <label class="btn btn-primary">
-    <input type="radio" name="selectedRadio" id="option2" name="selectedRadio" value="Goe more"> Afrikaans
+    <input type="radio" name="selectedRadio" id="option2" name="selectedRadio" value="Goeie more"> Afrikaans
   </label>
       <label class="btn btn-primary">
     <input type="radio" name="selectedRadio" id="option3" name="selectedRadio" value="Molo"> IsiXhosa
@@ -18,9 +21,9 @@
     </div>
   </div>
 
-  <div class="2btn-group">
+  <div class="btn-group-main">
     <input type="submit" class="btn btn-success text-center" value="Greet Me">
-    <a href="/greeted"><input class="btn btn-success text-center" value="View greeted Names"></a>
+    <a href="/greeted"><input class="btn btn-success text-center" value="View greeted Names" readonly="readonly"></a>
   </div>
 
 </form>

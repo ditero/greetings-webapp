@@ -1,0 +1,1313 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData mocha
+20 silly mapToRegistry name mocha
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/mocha
+24 verbose request uri https://registry.npmjs.org/mocha
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 2:22:45 PM
+27 verbose request id e7759b7d289b47fc
+28 verbose etag W/"598d08a0-ad191"
+29 verbose lastModified Fri, 11 Aug 2017 01:30:08 GMT
+30 http request GET https://registry.npmjs.org/mocha
+31 http 304 https://registry.npmjs.org/mocha
+32 verbose headers { date: 'Mon, 14 Aug 2017 12:22:46 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   etag: 'W/"598d08a0-ad191"',
+32 verbose headers   age: '0',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-jnb7520-JNB',
+32 verbose headers   'x-cache': 'HIT',
+32 verbose headers   'x-cache-hits': '1',
+32 verbose headers   'x-timer': 'S1502713366.141480,VS0,VE1219',
+32 verbose headers   vary: 'Accept-Encoding, Accept' }
+33 silly get cb [ 304,
+33 silly get   { date: 'Mon, 14 Aug 2017 12:22:46 GMT',
+33 silly get     via: '1.1 varnish',
+33 silly get     'cache-control': 'max-age=300',
+33 silly get     etag: 'W/"598d08a0-ad191"',
+33 silly get     age: '0',
+33 silly get     connection: 'keep-alive',
+33 silly get     'x-served-by': 'cache-jnb7520-JNB',
+33 silly get     'x-cache': 'HIT',
+33 silly get     'x-cache-hits': '1',
+33 silly get     'x-timer': 'S1502713366.141480,VS0,VE1219',
+33 silly get     vary: 'Accept-Encoding, Accept' } ]
+34 verbose etag https://registry.npmjs.org/mocha from cache
+35 verbose get saving mocha to /home/bootcamp/.npm/registry.npmjs.org/mocha/.cache.json
+36 silly resolveWithNewModule mocha@3.5.0 checking installable status
+37 silly cache add args [ 'mocha@^3.4.2', null ]
+38 verbose cache add spec mocha@^3.4.2
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'mocha@^3.4.2',
+39 silly cache add   scope: null,
+39 silly cache add   name: 'mocha',
+39 silly cache add   rawSpec: '^3.4.2',
+39 silly cache add   spec: '>=3.4.2 <4.0.0',
+39 silly cache add   type: 'range' }
+40 silly addNamed mocha@>=3.4.2 <4.0.0
+41 verbose addNamed ">=3.4.2 <4.0.0" is a valid semver range for mocha
+42 silly addNameRange { name: 'mocha', range: '>=3.4.2 <4.0.0', hasData: false }
+43 silly mapToRegistry name mocha
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry uri https://registry.npmjs.org/mocha
+47 verbose addNameRange registry:https://registry.npmjs.org/mocha not in flight; fetching
+48 verbose get https://registry.npmjs.org/mocha not expired, no request
+49 silly addNameRange number 2 { name: 'mocha', range: '>=3.4.2 <4.0.0', hasData: true }
+50 silly addNameRange versions [ 'mocha',
+50 silly addNameRange   [ '0.0.1-alpha1',
+50 silly addNameRange     '0.0.1-alpha2',
+50 silly addNameRange     '0.0.1-alpha3',
+50 silly addNameRange     '0.0.1-alpha4',
+50 silly addNameRange     '0.0.1-alpha5',
+50 silly addNameRange     '0.0.1-alpha6',
+50 silly addNameRange     '0.0.1',
+50 silly addNameRange     '0.0.2',
+50 silly addNameRange     '0.0.3',
+50 silly addNameRange     '0.0.4',
+50 silly addNameRange     '0.0.5',
+50 silly addNameRange     '0.0.6',
+50 silly addNameRange     '0.0.7',
+50 silly addNameRange     '0.0.8',
+50 silly addNameRange     '0.1.0',
+50 silly addNameRange     '0.2.0',
+50 silly addNameRange     '0.3.0',
+50 silly addNameRange     '0.3.1',
+50 silly addNameRange     '0.3.2',
+50 silly addNameRange     '0.3.3',
+50 silly addNameRange     '0.3.4',
+50 silly addNameRange     '0.3.6',
+50 silly addNameRange     '0.4.0',
+50 silly addNameRange     '0.5.0',
+50 silly addNameRange     '0.6.0',
+50 silly addNameRange     '0.7.0',
+50 silly addNameRange     '0.7.1',
+50 silly addNameRange     '0.8.0',
+50 silly addNameRange     '0.8.1',
+50 silly addNameRange     '0.9.0',
+50 silly addNameRange     '0.10.0',
+50 silly addNameRange     '0.10.1',
+50 silly addNameRange     '0.10.2',
+50 silly addNameRange     '0.11.0',
+50 silly addNameRange     '0.12.0',
+50 silly addNameRange     '0.12.1',
+50 silly addNameRange     '0.13.0',
+50 silly addNameRange     '0.14.0',
+50 silly addNameRange     '0.14.1',
+50 silly addNameRange     '1.0.0',
+50 silly addNameRange     '1.0.1',
+50 silly addNameRange     '1.0.2',
+50 silly addNameRange     '1.0.3',
+50 silly addNameRange     '1.1.0',
+50 silly addNameRange     '1.2.0',
+50 silly addNameRange     '1.2.1',
+50 silly addNameRange     '1.2.2',
+50 silly addNameRange     '1.3.0',
+50 silly addNameRange     '1.3.1',
+50 silly addNameRange     '1.3.2',
+50 silly addNameRange     '1.4.0',
+50 silly addNameRange     '1.4.1',
+50 silly addNameRange     '1.4.2',
+50 silly addNameRange     '1.4.3',
+50 silly addNameRange     '1.5.0',
+50 silly addNameRange     '1.6.0',
+50 silly addNameRange     '1.7.0',
+50 silly addNameRange     '1.7.1',
+50 silly addNameRange     '1.7.2',
+50 silly addNameRange     '1.7.3',
+50 silly addNameRange     '1.7.4',
+50 silly addNameRange     '1.8.0',
+50 silly addNameRange     '1.8.1',
+50 silly addNameRange     '1.8.2',
+50 silly addNameRange     '1.9.0',
+50 silly addNameRange     '1.10.0',
+50 silly addNameRange     '1.11.0',
+50 silly addNameRange     '1.12.0',
+50 silly addNameRange     '1.12.1',
+50 silly addNameRange     '1.13.0',
+50 silly addNameRange     '1.14.0',
+50 silly addNameRange     '1.15.0',
+50 silly addNameRange     '1.15.1',
+50 silly addNameRange     '1.16.0',
+50 silly addNameRange     '1.16.1',
+50 silly addNameRange     '1.16.2',
+50 silly addNameRange     '1.17.0',
+50 silly addNameRange     '1.17.1',
+50 silly addNameRange     '1.18.0',
+50 silly addNameRange     '1.18.1',
+50 silly addNameRange     '1.18.2',
+50 silly addNameRange     '1.19.0',
+50 silly addNameRange     '1.20.0',
+50 silly addNameRange     '1.20.1',
+50 silly addNameRange     '1.21.0',
+50 silly addNameRange     '1.21.1',
+50 silly addNameRange     '1.21.2',
+50 silly addNameRange     '1.21.3',
+50 silly addNameRange     '1.21.4',
+50 silly addNameRange     '1.21.5',
+50 silly addNameRange     '2.0.0',
+50 silly addNameRange     '2.0.1',
+50 silly addNameRange     '2.1.0',
+50 silly addNameRange     '2.2.0',
+50 silly addNameRange     '2.2.1',
+50 silly addNameRange     '2.2.3',
+50 silly addNameRange     '2.2.4',
+50 silly addNameRange     '2.2.5',
+50 silly addNameRange     '2.3.0',
+50 silly addNameRange     '2.3.1',
+50 silly addNameRange     '2.3.2',
+50 silly addNameRange     '2.3.3',
+50 silly addNameRange     '2.3.4',
+50 silly addNameRange     '2.4.1',
+50 silly addNameRange     '2.4.2',
+50 silly addNameRange     '2.4.3',
+50 silly addNameRange     '2.4.4',
+50 silly addNameRange     '2.4.5',
+50 silly addNameRange     '2.5.0',
+50 silly addNameRange     '2.5.1',
+50 silly addNameRange     '2.5.2',
+50 silly addNameRange     '2.5.3',
+50 silly addNameRange     '3.0.0-0',
+50 silly addNameRange     '3.0.0-1',
+50 silly addNameRange     '3.0.0-2',
+50 silly addNameRange     '3.0.0',
+50 silly addNameRange     '3.0.1',
+50 silly addNameRange     '3.0.2',
+50 silly addNameRange     '3.1.0',
+50 silly addNameRange     '3.1.1',
+50 silly addNameRange     '3.1.2',
+50 silly addNameRange     '3.2.0',
+50 silly addNameRange     '3.3.0',
+50 silly addNameRange     '3.4.1',
+50 silly addNameRange     '3.4.2',
+50 silly addNameRange     '3.5.0' ] ]
+51 silly addNamed mocha@3.5.0
+52 verbose addNamed "3.5.0" is a plain semver version for mocha
+53 silly cache afterAdd mocha@3.5.0
+54 verbose afterAdd /home/bootcamp/.npm/mocha/3.5.0/package/package.json not in flight; writing
+55 verbose afterAdd /home/bootcamp/.npm/mocha/3.5.0/package/package.json written
+56 silly fetchNamedPackageData debug
+57 silly mapToRegistry name debug
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry https://registry.npmjs.org/
+60 silly mapToRegistry uri https://registry.npmjs.org/debug
+61 silly fetchNamedPackageData glob
+62 silly mapToRegistry name glob
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry uri https://registry.npmjs.org/glob
+66 verbose request uri https://registry.npmjs.org/debug
+67 verbose request no auth needed
+68 info attempt registry request try #1 at 2:22:47 PM
+69 verbose etag W/"598cf53b-17531"
+70 verbose lastModified Fri, 11 Aug 2017 00:07:23 GMT
+71 http request GET https://registry.npmjs.org/debug
+72 verbose request uri https://registry.npmjs.org/glob
+73 verbose request no auth needed
+74 info attempt registry request try #1 at 2:22:47 PM
+75 verbose etag W/"5982b262-1fed0"
+76 verbose lastModified Thu, 03 Aug 2017 05:19:30 GMT
+77 http request GET https://registry.npmjs.org/glob
+78 http 304 https://registry.npmjs.org/glob
+79 verbose headers { date: 'Mon, 14 Aug 2017 12:22:48 GMT',
+79 verbose headers   via: '1.1 varnish',
+79 verbose headers   'cache-control': 'max-age=300',
+79 verbose headers   etag: 'W/"5982b262-1fed0"',
+79 verbose headers   age: '30',
+79 verbose headers   connection: 'keep-alive',
+79 verbose headers   'x-served-by': 'cache-jnb7522-JNB',
+79 verbose headers   'x-cache': 'HIT',
+79 verbose headers   'x-cache-hits': '5',
+79 verbose headers   'x-timer': 'S1502713368.346617,VS0,VE0',
+79 verbose headers   vary: 'Accept-Encoding, Accept' }
+80 silly get cb [ 304,
+80 silly get   { date: 'Mon, 14 Aug 2017 12:22:48 GMT',
+80 silly get     via: '1.1 varnish',
+80 silly get     'cache-control': 'max-age=300',
+80 silly get     etag: 'W/"5982b262-1fed0"',
+80 silly get     age: '30',
+80 silly get     connection: 'keep-alive',
+80 silly get     'x-served-by': 'cache-jnb7522-JNB',
+80 silly get     'x-cache': 'HIT',
+80 silly get     'x-cache-hits': '5',
+80 silly get     'x-timer': 'S1502713368.346617,VS0,VE0',
+80 silly get     vary: 'Accept-Encoding, Accept' } ]
+81 verbose etag https://registry.npmjs.org/glob from cache
+82 verbose get saving glob to /home/bootcamp/.npm/registry.npmjs.org/glob/.cache.json
+83 silly resolveWithNewModule glob@7.1.1 checking installable status
+84 silly cache add args [ 'glob@7.1.1', null ]
+85 verbose cache add spec glob@7.1.1
+86 silly cache add parsed spec Result {
+86 silly cache add   raw: 'glob@7.1.1',
+86 silly cache add   scope: null,
+86 silly cache add   name: 'glob',
+86 silly cache add   rawSpec: '7.1.1',
+86 silly cache add   spec: '7.1.1',
+86 silly cache add   type: 'version' }
+87 silly addNamed glob@7.1.1
+88 verbose addNamed "7.1.1" is a plain semver version for glob
+89 silly mapToRegistry name glob
+90 silly mapToRegistry using default registry
+91 silly mapToRegistry registry https://registry.npmjs.org/
+92 silly mapToRegistry uri https://registry.npmjs.org/glob
+93 verbose addNameVersion registry:https://registry.npmjs.org/glob not in flight; fetching
+94 verbose get https://registry.npmjs.org/glob not expired, no request
+95 http 200 https://registry.npmjs.org/debug
+96 verbose headers { server: 'nginx/1.10.1',
+96 verbose headers   'content-type': 'application/json',
+96 verbose headers   'last-modified': 'Mon, 14 Aug 2017 03:07:59 GMT',
+96 verbose headers   etag: 'W/"5991140f-17567"',
+96 verbose headers   'content-encoding': 'gzip',
+96 verbose headers   'cache-control': 'max-age=300',
+96 verbose headers   'content-length': '16027',
+96 verbose headers   'accept-ranges': 'bytes',
+96 verbose headers   date: 'Mon, 14 Aug 2017 12:22:48 GMT',
+96 verbose headers   via: '1.1 varnish',
+96 verbose headers   age: '181',
+96 verbose headers   connection: 'keep-alive',
+96 verbose headers   'x-served-by': 'cache-jnb7520-JNB',
+96 verbose headers   'x-cache': 'HIT',
+96 verbose headers   'x-cache-hits': '11',
+96 verbose headers   'x-timer': 'S1502713368.358381,VS0,VE0',
+96 verbose headers   vary: 'Accept-Encoding, Accept' }
+97 silly get cb [ 200,
+97 silly get   { server: 'nginx/1.10.1',
+97 silly get     'content-type': 'application/json',
+97 silly get     'last-modified': 'Mon, 14 Aug 2017 03:07:59 GMT',
+97 silly get     etag: 'W/"5991140f-17567"',
+97 silly get     'content-encoding': 'gzip',
+97 silly get     'cache-control': 'max-age=300',
+97 silly get     'content-length': '16027',
+97 silly get     'accept-ranges': 'bytes',
+97 silly get     date: 'Mon, 14 Aug 2017 12:22:48 GMT',
+97 silly get     via: '1.1 varnish',
+97 silly get     age: '181',
+97 silly get     connection: 'keep-alive',
+97 silly get     'x-served-by': 'cache-jnb7520-JNB',
+97 silly get     'x-cache': 'HIT',
+97 silly get     'x-cache-hits': '11',
+97 silly get     'x-timer': 'S1502713368.358381,VS0,VE0',
+97 silly get     vary: 'Accept-Encoding, Accept' } ]
+98 verbose get saving debug to /home/bootcamp/.npm/registry.npmjs.org/debug/.cache.json
+99 silly resolveWithNewModule debug@2.6.8 checking installable status
+100 silly cache add args [ 'debug@2.6.8', null ]
+101 verbose cache add spec debug@2.6.8
+102 silly cache add parsed spec Result {
+102 silly cache add   raw: 'debug@2.6.8',
+102 silly cache add   scope: null,
+102 silly cache add   name: 'debug',
+102 silly cache add   rawSpec: '2.6.8',
+102 silly cache add   spec: '2.6.8',
+102 silly cache add   type: 'version' }
+103 silly addNamed debug@2.6.8
+104 verbose addNamed "2.6.8" is a plain semver version for debug
+105 silly mapToRegistry name debug
+106 silly mapToRegistry using default registry
+107 silly mapToRegistry registry https://registry.npmjs.org/
+108 silly mapToRegistry uri https://registry.npmjs.org/debug
+109 verbose addNameVersion registry:https://registry.npmjs.org/debug not in flight; fetching
+110 verbose get https://registry.npmjs.org/debug not expired, no request
+111 silly cache afterAdd glob@7.1.1
+112 verbose afterAdd /home/bootcamp/.npm/glob/7.1.1/package/package.json not in flight; writing
+113 verbose afterAdd /home/bootcamp/.npm/glob/7.1.1/package/package.json written
+114 silly cache afterAdd debug@2.6.8
+115 verbose afterAdd /home/bootcamp/.npm/debug/2.6.8/package/package.json not in flight; writing
+116 verbose afterAdd /home/bootcamp/.npm/debug/2.6.8/package/package.json written
+117 silly fetchNamedPackageData minimatch
+118 silly mapToRegistry name minimatch
+119 silly mapToRegistry using default registry
+120 silly mapToRegistry registry https://registry.npmjs.org/
+121 silly mapToRegistry uri https://registry.npmjs.org/minimatch
+122 verbose request uri https://registry.npmjs.org/minimatch
+123 verbose request no auth needed
+124 info attempt registry request try #1 at 2:22:48 PM
+125 verbose etag W/"5982b37c-d1e1"
+126 verbose lastModified Thu, 03 Aug 2017 05:24:12 GMT
+127 http request GET https://registry.npmjs.org/minimatch
+128 http 304 https://registry.npmjs.org/minimatch
+129 verbose headers { date: 'Mon, 14 Aug 2017 12:22:48 GMT',
+129 verbose headers   via: '1.1 varnish',
+129 verbose headers   'cache-control': 'max-age=300',
+129 verbose headers   etag: 'W/"5982b37c-d1e1"',
+129 verbose headers   age: '276',
+129 verbose headers   connection: 'keep-alive',
+129 verbose headers   'x-served-by': 'cache-jnb7522-JNB',
+129 verbose headers   'x-cache': 'HIT',
+129 verbose headers   'x-cache-hits': '27',
+129 verbose headers   'x-timer': 'S1502713369.874731,VS0,VE0',
+129 verbose headers   vary: 'Accept-Encoding, Accept' }
+130 silly get cb [ 304,
+130 silly get   { date: 'Mon, 14 Aug 2017 12:22:48 GMT',
+130 silly get     via: '1.1 varnish',
+130 silly get     'cache-control': 'max-age=300',
+130 silly get     etag: 'W/"5982b37c-d1e1"',
+130 silly get     age: '276',
+130 silly get     connection: 'keep-alive',
+130 silly get     'x-served-by': 'cache-jnb7522-JNB',
+130 silly get     'x-cache': 'HIT',
+130 silly get     'x-cache-hits': '27',
+130 silly get     'x-timer': 'S1502713369.874731,VS0,VE0',
+130 silly get     vary: 'Accept-Encoding, Accept' } ]
+131 verbose etag https://registry.npmjs.org/minimatch from cache
+132 verbose get saving minimatch to /home/bootcamp/.npm/registry.npmjs.org/minimatch/.cache.json
+133 silly resolveWithNewModule minimatch@3.0.4 checking installable status
+134 silly cache add args [ 'minimatch@^3.0.2', null ]
+135 verbose cache add spec minimatch@^3.0.2
+136 silly cache add parsed spec Result {
+136 silly cache add   raw: 'minimatch@^3.0.2',
+136 silly cache add   scope: null,
+136 silly cache add   name: 'minimatch',
+136 silly cache add   rawSpec: '^3.0.2',
+136 silly cache add   spec: '>=3.0.2 <4.0.0',
+136 silly cache add   type: 'range' }
+137 silly addNamed minimatch@>=3.0.2 <4.0.0
+138 verbose addNamed ">=3.0.2 <4.0.0" is a valid semver range for minimatch
+139 silly addNameRange { name: 'minimatch', range: '>=3.0.2 <4.0.0', hasData: false }
+140 silly mapToRegistry name minimatch
+141 silly mapToRegistry using default registry
+142 silly mapToRegistry registry https://registry.npmjs.org/
+143 silly mapToRegistry uri https://registry.npmjs.org/minimatch
+144 verbose addNameRange registry:https://registry.npmjs.org/minimatch not in flight; fetching
+145 verbose get https://registry.npmjs.org/minimatch not expired, no request
+146 silly addNameRange number 2 { name: 'minimatch', range: '>=3.0.2 <4.0.0', hasData: true }
+147 silly addNameRange versions [ 'minimatch',
+147 silly addNameRange   [ '0.0.1',
+147 silly addNameRange     '0.0.2',
+147 silly addNameRange     '0.0.4',
+147 silly addNameRange     '0.0.5',
+147 silly addNameRange     '0.1.1',
+147 silly addNameRange     '0.1.2',
+147 silly addNameRange     '0.1.3',
+147 silly addNameRange     '0.1.4',
+147 silly addNameRange     '0.1.5',
+147 silly addNameRange     '0.2.0',
+147 silly addNameRange     '0.2.2',
+147 silly addNameRange     '0.2.3',
+147 silly addNameRange     '0.2.4',
+147 silly addNameRange     '0.2.5',
+147 silly addNameRange     '0.2.6',
+147 silly addNameRange     '0.2.7',
+147 silly addNameRange     '0.2.8',
+147 silly addNameRange     '0.2.9',
+147 silly addNameRange     '0.2.10',
+147 silly addNameRange     '0.2.11',
+147 silly addNameRange     '0.2.12',
+147 silly addNameRange     '0.2.13',
+147 silly addNameRange     '0.2.14',
+147 silly addNameRange     '0.3.0',
+147 silly addNameRange     '0.4.0',
+147 silly addNameRange     '1.0.0',
+147 silly addNameRange     '2.0.0',
+147 silly addNameRange     '2.0.1',
+147 silly addNameRange     '2.0.2',
+147 silly addNameRange     '2.0.3',
+147 silly addNameRange     '2.0.4',
+147 silly addNameRange     '2.0.5',
+147 silly addNameRange     '2.0.6',
+147 silly addNameRange     '2.0.7',
+147 silly addNameRange     '2.0.8',
+147 silly addNameRange     '2.0.9',
+147 silly addNameRange     '2.0.10',
+147 silly addNameRange     '3.0.0',
+147 silly addNameRange     '3.0.2',
+147 silly addNameRange     '3.0.3',
+147 silly addNameRange     '3.0.4' ] ]
+148 silly addNamed minimatch@3.0.4
+149 verbose addNamed "3.0.4" is a plain semver version for minimatch
+150 silly cache afterAdd minimatch@3.0.4
+151 verbose afterAdd /home/bootcamp/.npm/minimatch/3.0.4/package/package.json not in flight; writing
+152 verbose afterAdd /home/bootcamp/.npm/minimatch/3.0.4/package/package.json written
+153 silly loadAllDepsIntoIdealTree Finishing
+154 silly idealTree:prePrune greetings-webapp@1.0.0
+154 silly idealTree:prePrune ├── accepts@1.3.3
+154 silly idealTree:prePrune ├── align-text@0.1.4
+154 silly idealTree:prePrune ├── amdefine@1.0.1
+154 silly idealTree:prePrune ├── array-flatten@1.1.1
+154 silly idealTree:prePrune ├── asap@2.0.6
+154 silly idealTree:prePrune ├── async@1.5.2
+154 silly idealTree:prePrune ├── balanced-match@1.0.0
+154 silly idealTree:prePrune ├── bluebird@2.10.2
+154 silly idealTree:prePrune ├── body-parser@1.17.2
+154 silly idealTree:prePrune ├── brace-expansion@1.1.8
+154 silly idealTree:prePrune ├── browser-stdout@1.3.0
+154 silly idealTree:prePrune ├── bson@1.0.4
+154 silly idealTree:prePrune ├── buffer-shims@1.0.0
+154 silly idealTree:prePrune ├── bytes@2.4.0
+154 silly idealTree:prePrune ├── camelcase@1.2.1
+154 silly idealTree:prePrune ├── center-align@0.1.3
+154 silly idealTree:prePrune ├─┬ cliui@2.1.0
+154 silly idealTree:prePrune │ └── wordwrap@0.0.2
+154 silly idealTree:prePrune ├── commander@2.9.0
+154 silly idealTree:prePrune ├── concat-map@0.0.1
+154 silly idealTree:prePrune ├── connect-flash@0.1.1
+154 silly idealTree:prePrune ├── content-disposition@0.5.2
+154 silly idealTree:prePrune ├── content-type@1.0.2
+154 silly idealTree:prePrune ├── cookie-signature@1.0.6
+154 silly idealTree:prePrune ├── cookie@0.3.1
+154 silly idealTree:prePrune ├── core-util-is@1.0.2
+154 silly idealTree:prePrune ├── crc@3.4.4
+154 silly idealTree:prePrune ├── debug@2.6.7
+154 silly idealTree:prePrune ├── decamelize@1.2.0
+154 silly idealTree:prePrune ├── define-properties@1.1.2
+154 silly idealTree:prePrune ├── depd@1.1.0
+154 silly idealTree:prePrune ├── destroy@1.0.4
+154 silly idealTree:prePrune ├── diff@3.2.0
+154 silly idealTree:prePrune ├── ee-first@1.1.1
+154 silly idealTree:prePrune ├── encodeurl@1.0.1
+154 silly idealTree:prePrune ├── es6-promise@3.2.1
+154 silly idealTree:prePrune ├── escape-html@1.0.3
+154 silly idealTree:prePrune ├── escape-string-regexp@1.0.5
+154 silly idealTree:prePrune ├── etag@1.8.0
+154 silly idealTree:prePrune ├── express-flash@0.0.2
+154 silly idealTree:prePrune ├── express-handlebars@3.0.0
+154 silly idealTree:prePrune ├── express-session@1.15.3
+154 silly idealTree:prePrune ├── express@4.15.3
+154 silly idealTree:prePrune ├─┬ express3-handlebars@0.5.2
+154 silly idealTree:prePrune │ ├── async@0.2.10
+154 silly idealTree:prePrune │ ├── glob@3.2.11
+154 silly idealTree:prePrune │ ├── handlebars@1.3.0
+154 silly idealTree:prePrune │ ├── optimist@0.3.7
+154 silly idealTree:prePrune │ ├── source-map@0.1.43
+154 silly idealTree:prePrune │ └── uglify-js@2.3.6
+154 silly idealTree:prePrune ├── finalhandler@1.0.3
+154 silly idealTree:prePrune ├── foreach@2.0.5
+154 silly idealTree:prePrune ├── forwarded@0.1.0
+154 silly idealTree:prePrune ├── fresh@0.5.0
+154 silly idealTree:prePrune ├── fs.realpath@1.0.0
+154 silly idealTree:prePrune ├── function-bind@1.1.0
+154 silly idealTree:prePrune ├─┬ glob@6.0.4
+154 silly idealTree:prePrune │ └── minimatch@3.0.4
+154 silly idealTree:prePrune ├── graceful-fs@4.1.11
+154 silly idealTree:prePrune ├── graceful-readlink@1.0.1
+154 silly idealTree:prePrune ├── growl@1.9.2
+154 silly idealTree:prePrune ├── handlebars@4.0.10
+154 silly idealTree:prePrune ├── has-flag@1.0.0
+154 silly idealTree:prePrune ├── hooks-fixed@2.0.0
+154 silly idealTree:prePrune ├── http-errors@1.6.1
+154 silly idealTree:prePrune ├── iconv-lite@0.4.15
+154 silly idealTree:prePrune ├── inflight@1.0.6
+154 silly idealTree:prePrune ├── inherits@2.0.3
+154 silly idealTree:prePrune ├── ipaddr.js@1.4.0
+154 silly idealTree:prePrune ├── is-buffer@1.1.5
+154 silly idealTree:prePrune ├── isarray@1.0.0
+154 silly idealTree:prePrune ├── json3@3.3.2
+154 silly idealTree:prePrune ├── kareem@1.5.0
+154 silly idealTree:prePrune ├── kind-of@3.2.2
+154 silly idealTree:prePrune ├── lazy-cache@1.0.4
+154 silly idealTree:prePrune ├── lodash._baseassign@3.2.0
+154 silly idealTree:prePrune ├── lodash._basecopy@3.0.1
+154 silly idealTree:prePrune ├── lodash._basecreate@3.0.3
+154 silly idealTree:prePrune ├── lodash._getnative@3.9.1
+154 silly idealTree:prePrune ├── lodash._isiterateecall@3.0.9
+154 silly idealTree:prePrune ├── lodash.create@3.1.1
+154 silly idealTree:prePrune ├── lodash.isarguments@3.1.0
+154 silly idealTree:prePrune ├── lodash.isarray@3.0.4
+154 silly idealTree:prePrune ├── lodash.keys@3.1.2
+154 silly idealTree:prePrune ├── lodash@4.17.4
+154 silly idealTree:prePrune ├── longest@1.0.1
+154 silly idealTree:prePrune ├── lru-cache@2.7.3
+154 silly idealTree:prePrune ├── media-typer@0.3.0
+154 silly idealTree:prePrune ├── merge-descriptors@1.0.1
+154 silly idealTree:prePrune ├── methods@1.1.2
+154 silly idealTree:prePrune ├── mime-db@1.29.0
+154 silly idealTree:prePrune ├── mime-types@2.1.16
+154 silly idealTree:prePrune ├── mime@1.3.4
+154 silly idealTree:prePrune ├── minimatch@0.3.0
+154 silly idealTree:prePrune ├── minimist@0.0.10
+154 silly idealTree:prePrune ├─┬ mkdirp@0.5.1
+154 silly idealTree:prePrune │ └── minimist@0.0.8
+154 silly idealTree:prePrune ├─┬ mocha@3.5.0
+154 silly idealTree:prePrune │ ├── debug@2.6.8
+154 silly idealTree:prePrune │ ├── glob@7.1.1
+154 silly idealTree:prePrune │ └── minimatch@3.0.4
+154 silly idealTree:prePrune ├─┬ mongodb@2.2.30
+154 silly idealTree:prePrune │ └── mongodb-core@2.1.14
+154 silly idealTree:prePrune ├─┬ mongoose@4.11.6
+154 silly idealTree:prePrune │ └── async@2.1.4
+154 silly idealTree:prePrune ├── mpath@0.3.0
+154 silly idealTree:prePrune ├── mpromise@0.5.5
+154 silly idealTree:prePrune ├─┬ mquery@2.3.1
+154 silly idealTree:prePrune │ ├── debug@2.6.8
+154 silly idealTree:prePrune │ └── sliced@0.0.5
+154 silly idealTree:prePrune ├── ms@2.0.0
+154 silly idealTree:prePrune ├── muri@1.2.2
+154 silly idealTree:prePrune ├── negotiator@0.6.1
+154 silly idealTree:prePrune ├── object-keys@1.0.11
+154 silly idealTree:prePrune ├── object.assign@4.0.4
+154 silly idealTree:prePrune ├── on-finished@2.3.0
+154 silly idealTree:prePrune ├── on-headers@1.0.1
+154 silly idealTree:prePrune ├── once@1.4.0
+154 silly idealTree:prePrune ├── optimist@0.6.1
+154 silly idealTree:prePrune ├── parseurl@1.3.1
+154 silly idealTree:prePrune ├── path-is-absolute@1.0.1
+154 silly idealTree:prePrune ├── path-to-regexp@0.1.7
+154 silly idealTree:prePrune ├── process-nextick-args@1.0.7
+154 silly idealTree:prePrune ├── promise@7.3.1
+154 silly idealTree:prePrune ├── proxy-addr@1.1.5
+154 silly idealTree:prePrune ├── qs@6.4.0
+154 silly idealTree:prePrune ├── random-bytes@1.0.0
+154 silly idealTree:prePrune ├── range-parser@1.2.0
+154 silly idealTree:prePrune ├── raw-body@2.2.0
+154 silly idealTree:prePrune ├── readable-stream@2.2.7
+154 silly idealTree:prePrune ├── regexp-clone@0.0.1
+154 silly idealTree:prePrune ├── repeat-string@1.6.1
+154 silly idealTree:prePrune ├─┬ require_optional@1.0.1
+154 silly idealTree:prePrune │ └── semver@5.4.1
+154 silly idealTree:prePrune ├── resolve-from@2.0.0
+154 silly idealTree:prePrune ├── right-align@0.1.3
+154 silly idealTree:prePrune ├── safe-buffer@5.1.1
+154 silly idealTree:prePrune ├── semver@2.3.2
+154 silly idealTree:prePrune ├── send@0.15.3
+154 silly idealTree:prePrune ├── serve-static@1.12.3
+154 silly idealTree:prePrune ├── setprototypeof@1.0.3
+154 silly idealTree:prePrune ├── sigmund@1.0.1
+154 silly idealTree:prePrune ├── sliced@1.0.1
+154 silly idealTree:prePrune ├── source-map@0.4.4
+154 silly idealTree:prePrune ├── statuses@1.3.1
+154 silly idealTree:prePrune ├── string_decoder@1.0.3
+154 silly idealTree:prePrune ├── supports-color@3.1.2
+154 silly idealTree:prePrune ├── type-is@1.6.15
+154 silly idealTree:prePrune ├─┬ uglify-js@2.8.29
+154 silly idealTree:prePrune │ └── source-map@0.5.6
+154 silly idealTree:prePrune ├── uglify-to-browserify@1.0.2
+154 silly idealTree:prePrune ├── uid-safe@2.1.4
+154 silly idealTree:prePrune ├── unpipe@1.0.0
+154 silly idealTree:prePrune ├── util-deprecate@1.0.2
+154 silly idealTree:prePrune ├── utils-merge@1.0.0
+154 silly idealTree:prePrune ├── vary@1.1.1
+154 silly idealTree:prePrune ├── window-size@0.1.0
+154 silly idealTree:prePrune ├── wordwrap@0.0.3
+154 silly idealTree:prePrune ├── wrappy@1.0.2
+154 silly idealTree:prePrune └── yargs@3.10.0
+155 silly loadIdealTree Finishing
+156 silly currentTree greetings-webapp@1.0.0
+156 silly currentTree ├── accepts@1.3.3
+156 silly currentTree ├── align-text@0.1.4
+156 silly currentTree ├── amdefine@1.0.1
+156 silly currentTree ├── array-flatten@1.1.1
+156 silly currentTree ├── asap@2.0.6
+156 silly currentTree ├── async@1.5.2
+156 silly currentTree ├── balanced-match@1.0.0
+156 silly currentTree ├── bluebird@2.10.2
+156 silly currentTree ├── body-parser@1.17.2
+156 silly currentTree ├── brace-expansion@1.1.8
+156 silly currentTree ├── browser-stdout@1.3.0
+156 silly currentTree ├── bson@1.0.4
+156 silly currentTree ├── buffer-shims@1.0.0
+156 silly currentTree ├── bytes@2.4.0
+156 silly currentTree ├── camelcase@1.2.1
+156 silly currentTree ├── center-align@0.1.3
+156 silly currentTree ├─┬ cliui@2.1.0
+156 silly currentTree │ └── wordwrap@0.0.2
+156 silly currentTree ├── commander@2.9.0
+156 silly currentTree ├── concat-map@0.0.1
+156 silly currentTree ├── connect-flash@0.1.1
+156 silly currentTree ├── content-disposition@0.5.2
+156 silly currentTree ├── content-type@1.0.2
+156 silly currentTree ├── cookie-signature@1.0.6
+156 silly currentTree ├── cookie@0.3.1
+156 silly currentTree ├── core-util-is@1.0.2
+156 silly currentTree ├── crc@3.4.4
+156 silly currentTree ├── debug@2.6.7
+156 silly currentTree ├── decamelize@1.2.0
+156 silly currentTree ├── define-properties@1.1.2
+156 silly currentTree ├── depd@1.1.0
+156 silly currentTree ├── destroy@1.0.4
+156 silly currentTree ├── diff@3.2.0
+156 silly currentTree ├── ee-first@1.1.1
+156 silly currentTree ├── encodeurl@1.0.1
+156 silly currentTree ├── es6-promise@3.2.1
+156 silly currentTree ├── escape-html@1.0.3
+156 silly currentTree ├── escape-string-regexp@1.0.5
+156 silly currentTree ├── etag@1.8.0
+156 silly currentTree ├── express-flash@0.0.2
+156 silly currentTree ├── express-handlebars@3.0.0
+156 silly currentTree ├── express-session@1.15.3
+156 silly currentTree ├── express@4.15.3
+156 silly currentTree ├─┬ express3-handlebars@0.5.2
+156 silly currentTree │ ├── async@0.2.10
+156 silly currentTree │ ├── glob@3.2.11
+156 silly currentTree │ ├── handlebars@1.3.0
+156 silly currentTree │ ├── optimist@0.3.7
+156 silly currentTree │ ├── source-map@0.1.43
+156 silly currentTree │ └── uglify-js@2.3.6
+156 silly currentTree ├── finalhandler@1.0.3
+156 silly currentTree ├── foreach@2.0.5
+156 silly currentTree ├── forwarded@0.1.0
+156 silly currentTree ├── fresh@0.5.0
+156 silly currentTree ├── fs.realpath@1.0.0
+156 silly currentTree ├── function-bind@1.1.0
+156 silly currentTree ├─┬ glob@6.0.4
+156 silly currentTree │ └── minimatch@3.0.4
+156 silly currentTree ├── graceful-fs@4.1.11
+156 silly currentTree ├── graceful-readlink@1.0.1
+156 silly currentTree ├── growl@1.9.2
+156 silly currentTree ├── handlebars@4.0.10
+156 silly currentTree ├── has-flag@1.0.0
+156 silly currentTree ├── hooks-fixed@2.0.0
+156 silly currentTree ├── http-errors@1.6.1
+156 silly currentTree ├── iconv-lite@0.4.15
+156 silly currentTree ├── inflight@1.0.6
+156 silly currentTree ├── inherits@2.0.3
+156 silly currentTree ├── ipaddr.js@1.4.0
+156 silly currentTree ├── is-buffer@1.1.5
+156 silly currentTree ├── isarray@1.0.0
+156 silly currentTree ├── json3@3.3.2
+156 silly currentTree ├── kareem@1.5.0
+156 silly currentTree ├── kind-of@3.2.2
+156 silly currentTree ├── lazy-cache@1.0.4
+156 silly currentTree ├── lodash._baseassign@3.2.0
+156 silly currentTree ├── lodash._basecopy@3.0.1
+156 silly currentTree ├── lodash._basecreate@3.0.3
+156 silly currentTree ├── lodash._getnative@3.9.1
+156 silly currentTree ├── lodash._isiterateecall@3.0.9
+156 silly currentTree ├── lodash.create@3.1.1
+156 silly currentTree ├── lodash.isarguments@3.1.0
+156 silly currentTree ├── lodash.isarray@3.0.4
+156 silly currentTree ├── lodash.keys@3.1.2
+156 silly currentTree ├── lodash@4.17.4
+156 silly currentTree ├── longest@1.0.1
+156 silly currentTree ├── lru-cache@2.7.3
+156 silly currentTree ├── media-typer@0.3.0
+156 silly currentTree ├── merge-descriptors@1.0.1
+156 silly currentTree ├── methods@1.1.2
+156 silly currentTree ├── mime-db@1.29.0
+156 silly currentTree ├── mime-types@2.1.16
+156 silly currentTree ├── mime@1.3.4
+156 silly currentTree ├── minimatch@0.3.0
+156 silly currentTree ├── minimist@0.0.10
+156 silly currentTree ├─┬ mkdirp@0.5.1
+156 silly currentTree │ └── minimist@0.0.8
+156 silly currentTree ├─┬ mongodb@2.2.30
+156 silly currentTree │ └── mongodb-core@2.1.14
+156 silly currentTree ├─┬ mongoose@4.11.6
+156 silly currentTree │ └── async@2.1.4
+156 silly currentTree ├── mpath@0.3.0
+156 silly currentTree ├── mpromise@0.5.5
+156 silly currentTree ├─┬ mquery@2.3.1
+156 silly currentTree │ ├── debug@2.6.8
+156 silly currentTree │ └── sliced@0.0.5
+156 silly currentTree ├── ms@2.0.0
+156 silly currentTree ├── muri@1.2.2
+156 silly currentTree ├── negotiator@0.6.1
+156 silly currentTree ├── object-keys@1.0.11
+156 silly currentTree ├── object.assign@4.0.4
+156 silly currentTree ├── on-finished@2.3.0
+156 silly currentTree ├── on-headers@1.0.1
+156 silly currentTree ├── once@1.4.0
+156 silly currentTree ├── optimist@0.6.1
+156 silly currentTree ├── parseurl@1.3.1
+156 silly currentTree ├── path-is-absolute@1.0.1
+156 silly currentTree ├── path-to-regexp@0.1.7
+156 silly currentTree ├── process-nextick-args@1.0.7
+156 silly currentTree ├── promise@7.3.1
+156 silly currentTree ├── proxy-addr@1.1.5
+156 silly currentTree ├── qs@6.4.0
+156 silly currentTree ├── random-bytes@1.0.0
+156 silly currentTree ├── range-parser@1.2.0
+156 silly currentTree ├── raw-body@2.2.0
+156 silly currentTree ├── readable-stream@2.2.7
+156 silly currentTree ├── regexp-clone@0.0.1
+156 silly currentTree ├── repeat-string@1.6.1
+156 silly currentTree ├─┬ require_optional@1.0.1
+156 silly currentTree │ └── semver@5.4.1
+156 silly currentTree ├── resolve-from@2.0.0
+156 silly currentTree ├── right-align@0.1.3
+156 silly currentTree ├── safe-buffer@5.1.1
+156 silly currentTree ├── semver@2.3.2
+156 silly currentTree ├── send@0.15.3
+156 silly currentTree ├── serve-static@1.12.3
+156 silly currentTree ├── setprototypeof@1.0.3
+156 silly currentTree ├── sigmund@1.0.1
+156 silly currentTree ├── sliced@1.0.1
+156 silly currentTree ├── source-map@0.4.4
+156 silly currentTree ├── statuses@1.3.1
+156 silly currentTree ├── string_decoder@1.0.3
+156 silly currentTree ├── supports-color@3.1.2
+156 silly currentTree ├── type-is@1.6.15
+156 silly currentTree ├─┬ uglify-js@2.8.29
+156 silly currentTree │ └── source-map@0.5.6
+156 silly currentTree ├── uglify-to-browserify@1.0.2
+156 silly currentTree ├── uid-safe@2.1.4
+156 silly currentTree ├── unpipe@1.0.0
+156 silly currentTree ├── util-deprecate@1.0.2
+156 silly currentTree ├── utils-merge@1.0.0
+156 silly currentTree ├── vary@1.1.1
+156 silly currentTree ├── window-size@0.1.0
+156 silly currentTree ├── wordwrap@0.0.3
+156 silly currentTree ├── wrappy@1.0.2
+156 silly currentTree └── yargs@3.10.0
+157 silly idealTree greetings-webapp@1.0.0
+157 silly idealTree ├── accepts@1.3.3
+157 silly idealTree ├── align-text@0.1.4
+157 silly idealTree ├── amdefine@1.0.1
+157 silly idealTree ├── array-flatten@1.1.1
+157 silly idealTree ├── asap@2.0.6
+157 silly idealTree ├── async@1.5.2
+157 silly idealTree ├── balanced-match@1.0.0
+157 silly idealTree ├── bluebird@2.10.2
+157 silly idealTree ├── body-parser@1.17.2
+157 silly idealTree ├── brace-expansion@1.1.8
+157 silly idealTree ├── browser-stdout@1.3.0
+157 silly idealTree ├── bson@1.0.4
+157 silly idealTree ├── buffer-shims@1.0.0
+157 silly idealTree ├── bytes@2.4.0
+157 silly idealTree ├── camelcase@1.2.1
+157 silly idealTree ├── center-align@0.1.3
+157 silly idealTree ├─┬ cliui@2.1.0
+157 silly idealTree │ └── wordwrap@0.0.2
+157 silly idealTree ├── commander@2.9.0
+157 silly idealTree ├── concat-map@0.0.1
+157 silly idealTree ├── connect-flash@0.1.1
+157 silly idealTree ├── content-disposition@0.5.2
+157 silly idealTree ├── content-type@1.0.2
+157 silly idealTree ├── cookie-signature@1.0.6
+157 silly idealTree ├── cookie@0.3.1
+157 silly idealTree ├── core-util-is@1.0.2
+157 silly idealTree ├── crc@3.4.4
+157 silly idealTree ├── debug@2.6.7
+157 silly idealTree ├── decamelize@1.2.0
+157 silly idealTree ├── define-properties@1.1.2
+157 silly idealTree ├── depd@1.1.0
+157 silly idealTree ├── destroy@1.0.4
+157 silly idealTree ├── diff@3.2.0
+157 silly idealTree ├── ee-first@1.1.1
+157 silly idealTree ├── encodeurl@1.0.1
+157 silly idealTree ├── es6-promise@3.2.1
+157 silly idealTree ├── escape-html@1.0.3
+157 silly idealTree ├── escape-string-regexp@1.0.5
+157 silly idealTree ├── etag@1.8.0
+157 silly idealTree ├── express-flash@0.0.2
+157 silly idealTree ├── express-handlebars@3.0.0
+157 silly idealTree ├── express-session@1.15.3
+157 silly idealTree ├── express@4.15.3
+157 silly idealTree ├─┬ express3-handlebars@0.5.2
+157 silly idealTree │ ├── async@0.2.10
+157 silly idealTree │ ├── glob@3.2.11
+157 silly idealTree │ ├── handlebars@1.3.0
+157 silly idealTree │ ├── optimist@0.3.7
+157 silly idealTree │ ├── source-map@0.1.43
+157 silly idealTree │ └── uglify-js@2.3.6
+157 silly idealTree ├── finalhandler@1.0.3
+157 silly idealTree ├── foreach@2.0.5
+157 silly idealTree ├── forwarded@0.1.0
+157 silly idealTree ├── fresh@0.5.0
+157 silly idealTree ├── fs.realpath@1.0.0
+157 silly idealTree ├── function-bind@1.1.0
+157 silly idealTree ├─┬ glob@6.0.4
+157 silly idealTree │ └── minimatch@3.0.4
+157 silly idealTree ├── graceful-fs@4.1.11
+157 silly idealTree ├── graceful-readlink@1.0.1
+157 silly idealTree ├── growl@1.9.2
+157 silly idealTree ├── handlebars@4.0.10
+157 silly idealTree ├── has-flag@1.0.0
+157 silly idealTree ├── hooks-fixed@2.0.0
+157 silly idealTree ├── http-errors@1.6.1
+157 silly idealTree ├── iconv-lite@0.4.15
+157 silly idealTree ├── inflight@1.0.6
+157 silly idealTree ├── inherits@2.0.3
+157 silly idealTree ├── ipaddr.js@1.4.0
+157 silly idealTree ├── is-buffer@1.1.5
+157 silly idealTree ├── isarray@1.0.0
+157 silly idealTree ├── json3@3.3.2
+157 silly idealTree ├── kareem@1.5.0
+157 silly idealTree ├── kind-of@3.2.2
+157 silly idealTree ├── lazy-cache@1.0.4
+157 silly idealTree ├── lodash._baseassign@3.2.0
+157 silly idealTree ├── lodash._basecopy@3.0.1
+157 silly idealTree ├── lodash._basecreate@3.0.3
+157 silly idealTree ├── lodash._getnative@3.9.1
+157 silly idealTree ├── lodash._isiterateecall@3.0.9
+157 silly idealTree ├── lodash.create@3.1.1
+157 silly idealTree ├── lodash.isarguments@3.1.0
+157 silly idealTree ├── lodash.isarray@3.0.4
+157 silly idealTree ├── lodash.keys@3.1.2
+157 silly idealTree ├── lodash@4.17.4
+157 silly idealTree ├── longest@1.0.1
+157 silly idealTree ├── lru-cache@2.7.3
+157 silly idealTree ├── media-typer@0.3.0
+157 silly idealTree ├── merge-descriptors@1.0.1
+157 silly idealTree ├── methods@1.1.2
+157 silly idealTree ├── mime-db@1.29.0
+157 silly idealTree ├── mime-types@2.1.16
+157 silly idealTree ├── mime@1.3.4
+157 silly idealTree ├── minimatch@0.3.0
+157 silly idealTree ├── minimist@0.0.10
+157 silly idealTree ├─┬ mkdirp@0.5.1
+157 silly idealTree │ └── minimist@0.0.8
+157 silly idealTree ├─┬ mocha@3.5.0
+157 silly idealTree │ ├── debug@2.6.8
+157 silly idealTree │ ├── glob@7.1.1
+157 silly idealTree │ └── minimatch@3.0.4
+157 silly idealTree ├─┬ mongodb@2.2.30
+157 silly idealTree │ └── mongodb-core@2.1.14
+157 silly idealTree ├─┬ mongoose@4.11.6
+157 silly idealTree │ └── async@2.1.4
+157 silly idealTree ├── mpath@0.3.0
+157 silly idealTree ├── mpromise@0.5.5
+157 silly idealTree ├─┬ mquery@2.3.1
+157 silly idealTree │ ├── debug@2.6.8
+157 silly idealTree │ └── sliced@0.0.5
+157 silly idealTree ├── ms@2.0.0
+157 silly idealTree ├── muri@1.2.2
+157 silly idealTree ├── negotiator@0.6.1
+157 silly idealTree ├── object-keys@1.0.11
+157 silly idealTree ├── object.assign@4.0.4
+157 silly idealTree ├── on-finished@2.3.0
+157 silly idealTree ├── on-headers@1.0.1
+157 silly idealTree ├── once@1.4.0
+157 silly idealTree ├── optimist@0.6.1
+157 silly idealTree ├── parseurl@1.3.1
+157 silly idealTree ├── path-is-absolute@1.0.1
+157 silly idealTree ├── path-to-regexp@0.1.7
+157 silly idealTree ├── process-nextick-args@1.0.7
+157 silly idealTree ├── promise@7.3.1
+157 silly idealTree ├── proxy-addr@1.1.5
+157 silly idealTree ├── qs@6.4.0
+157 silly idealTree ├── random-bytes@1.0.0
+157 silly idealTree ├── range-parser@1.2.0
+157 silly idealTree ├── raw-body@2.2.0
+157 silly idealTree ├── readable-stream@2.2.7
+157 silly idealTree ├── regexp-clone@0.0.1
+157 silly idealTree ├── repeat-string@1.6.1
+157 silly idealTree ├─┬ require_optional@1.0.1
+157 silly idealTree │ └── semver@5.4.1
+157 silly idealTree ├── resolve-from@2.0.0
+157 silly idealTree ├── right-align@0.1.3
+157 silly idealTree ├── safe-buffer@5.1.1
+157 silly idealTree ├── semver@2.3.2
+157 silly idealTree ├── send@0.15.3
+157 silly idealTree ├── serve-static@1.12.3
+157 silly idealTree ├── setprototypeof@1.0.3
+157 silly idealTree ├── sigmund@1.0.1
+157 silly idealTree ├── sliced@1.0.1
+157 silly idealTree ├── source-map@0.4.4
+157 silly idealTree ├── statuses@1.3.1
+157 silly idealTree ├── string_decoder@1.0.3
+157 silly idealTree ├── supports-color@3.1.2
+157 silly idealTree ├── type-is@1.6.15
+157 silly idealTree ├─┬ uglify-js@2.8.29
+157 silly idealTree │ └── source-map@0.5.6
+157 silly idealTree ├── uglify-to-browserify@1.0.2
+157 silly idealTree ├── uid-safe@2.1.4
+157 silly idealTree ├── unpipe@1.0.0
+157 silly idealTree ├── util-deprecate@1.0.2
+157 silly idealTree ├── utils-merge@1.0.0
+157 silly idealTree ├── vary@1.1.1
+157 silly idealTree ├── window-size@0.1.0
+157 silly idealTree ├── wordwrap@0.0.3
+157 silly idealTree ├── wrappy@1.0.2
+157 silly idealTree └── yargs@3.10.0
+158 silly generateActionsToTake Starting
+159 silly install generateActionsToTake
+160 silly generateActionsToTake Finishing
+161 silly diffTrees action count 5
+162 silly diffTrees add debug@2.6.8
+163 silly diffTrees add minimatch@3.0.4
+164 silly diffTrees add glob@7.1.1
+165 silly diffTrees update express@4.15.3
+166 silly diffTrees add mocha@3.5.0
+167 silly decomposeActions action count 40
+168 silly decomposeActions fetch debug@2.6.8
+169 silly decomposeActions extract debug@2.6.8
+170 silly decomposeActions test debug@2.6.8
+171 silly decomposeActions preinstall debug@2.6.8
+172 silly decomposeActions build debug@2.6.8
+173 silly decomposeActions install debug@2.6.8
+174 silly decomposeActions postinstall debug@2.6.8
+175 silly decomposeActions finalize debug@2.6.8
+176 silly decomposeActions fetch minimatch@3.0.4
+177 silly decomposeActions extract minimatch@3.0.4
+178 silly decomposeActions test minimatch@3.0.4
+179 silly decomposeActions preinstall minimatch@3.0.4
+180 silly decomposeActions build minimatch@3.0.4
+181 silly decomposeActions install minimatch@3.0.4
+182 silly decomposeActions postinstall minimatch@3.0.4
+183 silly decomposeActions finalize minimatch@3.0.4
+184 silly decomposeActions fetch glob@7.1.1
+185 silly decomposeActions extract glob@7.1.1
+186 silly decomposeActions test glob@7.1.1
+187 silly decomposeActions preinstall glob@7.1.1
+188 silly decomposeActions build glob@7.1.1
+189 silly decomposeActions install glob@7.1.1
+190 silly decomposeActions postinstall glob@7.1.1
+191 silly decomposeActions finalize glob@7.1.1
+192 silly decomposeActions fetch express@4.15.3
+193 silly decomposeActions extract express@4.15.3
+194 silly decomposeActions test express@4.15.3
+195 silly decomposeActions preinstall express@4.15.3
+196 silly decomposeActions build express@4.15.3
+197 silly decomposeActions install express@4.15.3
+198 silly decomposeActions postinstall express@4.15.3
+199 silly decomposeActions finalize express@4.15.3
+200 silly decomposeActions fetch mocha@3.5.0
+201 silly decomposeActions extract mocha@3.5.0
+202 silly decomposeActions test mocha@3.5.0
+203 silly decomposeActions preinstall mocha@3.5.0
+204 silly decomposeActions build mocha@3.5.0
+205 silly decomposeActions install mocha@3.5.0
+206 silly decomposeActions postinstall mocha@3.5.0
+207 silly decomposeActions finalize mocha@3.5.0
+208 silly executeActions Starting
+209 silly install executeActions
+210 silly doSerial global-install 0
+211 silly doParallel fetch 5
+212 verbose lock using /home/bootcamp/.npm/_locks/staging-e360bd5d73058bf9.lock for /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging
+213 silly doParallel extract 5
+214 silly extract debug@2.6.8
+215 silly extract minimatch@3.0.4
+216 silly extract glob@7.1.1
+217 silly extract express@4.15.3
+218 silly extract mocha@3.5.0
+219 verbose unbuild node_modules/.staging/debug-e67ae33c
+220 verbose unbuild node_modules/.staging/minimatch-0139366a
+221 verbose unbuild node_modules/.staging/glob-fa5ee07b
+222 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/debug-e67ae33c is being purged from base /media/bootcamp/933C-C67F/greetings-webapp
+223 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/debug-e67ae33c
+224 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/minimatch-0139366a is being purged from base /media/bootcamp/933C-C67F/greetings-webapp
+225 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/minimatch-0139366a
+226 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/glob-fa5ee07b is being purged from base /media/bootcamp/933C-C67F/greetings-webapp
+227 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/glob-fa5ee07b
+228 verbose unbuild node_modules/.staging/mocha-73c5e9c6
+229 verbose tar unpack /home/bootcamp/.npm/debug/2.6.8/package.tgz
+230 verbose tar unpacking to /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/debug-e67ae33c
+231 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/debug-e67ae33c is being purged
+232 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/debug-e67ae33c
+233 verbose tar unpack /home/bootcamp/.npm/minimatch/3.0.4/package.tgz
+234 verbose tar unpacking to /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/minimatch-0139366a
+235 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/minimatch-0139366a is being purged
+236 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/minimatch-0139366a
+237 verbose tar unpack /home/bootcamp/.npm/glob/7.1.1/package.tgz
+238 verbose tar unpacking to /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/glob-fa5ee07b
+239 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/glob-fa5ee07b is being purged
+240 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/glob-fa5ee07b
+241 silly gunzTarPerm modes [ '775', '664' ]
+242 silly gunzTarPerm modes [ '775', '664' ]
+243 silly gunzTarPerm modes [ '775', '664' ]
+244 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/mocha-73c5e9c6 is being purged from base /media/bootcamp/933C-C67F/greetings-webapp
+245 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/mocha-73c5e9c6
+246 verbose tar unpack /home/bootcamp/.npm/mocha/3.5.0/package.tgz
+247 verbose tar unpacking to /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/mocha-73c5e9c6
+248 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/mocha-73c5e9c6 is being purged
+249 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/mocha-73c5e9c6
+250 silly gunzTarPerm modes [ '775', '664' ]
+251 silly gunzTarPerm extractEntry package.json
+252 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+253 silly gunzTarPerm extractEntry package.json
+254 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+255 silly gunzTarPerm extractEntry package.json
+256 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+257 silly gunzTarPerm extractEntry package.json
+258 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+259 silly gunzTarPerm extractEntry .npmignore
+260 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+261 silly gunzTarPerm extractEntry README.md
+262 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+263 silly gunzTarPerm extractEntry README.md
+264 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+265 silly gunzTarPerm extractEntry LICENSE
+266 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+267 silly gunzTarPerm extractEntry README.md
+268 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+269 silly gunzTarPerm extractEntry LICENSE
+270 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+271 silly gunzTarPerm extractEntry common.js
+272 silly gunzTarPerm modified mode [ 'common.js', 420, 436 ]
+273 silly gunzTarPerm extractEntry glob.js
+274 silly gunzTarPerm modified mode [ 'glob.js', 420, 436 ]
+275 silly gunzTarPerm extractEntry sync.js
+276 silly gunzTarPerm modified mode [ 'sync.js', 420, 436 ]
+277 silly gunzTarPerm extractEntry changelog.md
+278 silly gunzTarPerm modified mode [ 'changelog.md', 420, 436 ]
+279 silly gunzTarPerm extractEntry README.md
+280 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+281 silly gunzTarPerm extractEntry minimatch.js
+282 silly gunzTarPerm modified mode [ 'minimatch.js', 420, 436 ]
+283 silly gunzTarPerm extractEntry LICENSE
+284 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+285 silly gunzTarPerm extractEntry karma.conf.js
+286 silly gunzTarPerm modified mode [ 'karma.conf.js', 420, 436 ]
+287 silly gunzTarPerm extractEntry node.js
+288 silly gunzTarPerm modified mode [ 'node.js', 420, 436 ]
+289 silly gunzTarPerm extractEntry Makefile
+290 silly gunzTarPerm modified mode [ 'Makefile', 420, 436 ]
+291 silly gunzTarPerm extractEntry LICENSE
+292 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+293 silly gunzTarPerm extractEntry browser-entry.js
+294 silly gunzTarPerm modified mode [ 'browser-entry.js', 420, 436 ]
+295 verbose unbuild node_modules/.staging/express-4ad93285
+296 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/express-4ad93285 is being purged from base /media/bootcamp/933C-C67F/greetings-webapp
+297 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/express-4ad93285
+298 verbose tar unpack /home/bootcamp/.npm/express/4.15.3/package.tgz
+299 verbose tar unpacking to /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/express-4ad93285
+300 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/express-4ad93285 is being purged
+301 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/express-4ad93285
+302 silly gunzTarPerm modes [ '775', '664' ]
+303 silly gunzTarPerm extractEntry .coveralls.yml
+304 silly gunzTarPerm modified mode [ '.coveralls.yml', 420, 436 ]
+305 silly gunzTarPerm extractEntry .eslintrc
+306 silly gunzTarPerm modified mode [ '.eslintrc', 420, 436 ]
+307 silly gunzTarPerm extractEntry component.json
+308 silly gunzTarPerm modified mode [ 'component.json', 420, 436 ]
+309 silly gunzTarPerm extractEntry index.js
+310 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+311 silly gunzTarPerm extractEntry mocha.js
+312 silly gunzTarPerm modified mode [ 'mocha.js', 420, 436 ]
+313 silly gunzTarPerm extractEntry .travis.yml
+314 silly gunzTarPerm modified mode [ '.travis.yml', 420, 436 ]
+315 silly gunzTarPerm extractEntry CHANGELOG.md
+316 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 436 ]
+317 silly gunzTarPerm extractEntry src/browser.js
+318 silly gunzTarPerm modified mode [ 'src/browser.js', 420, 436 ]
+319 silly gunzTarPerm extractEntry src/debug.js
+320 silly gunzTarPerm modified mode [ 'src/debug.js', 420, 436 ]
+321 silly gunzTarPerm extractEntry package.json
+322 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+323 silly gunzTarPerm extractEntry LICENSE
+324 silly gunzTarPerm modified mode [ 'LICENSE', 420, 436 ]
+325 silly gunzTarPerm extractEntry index.js
+326 silly gunzTarPerm modified mode [ 'index.js', 420, 436 ]
+327 silly gunzTarPerm extractEntry CHANGELOG.md
+328 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 436 ]
+329 silly gunzTarPerm extractEntry src/index.js
+330 silly gunzTarPerm modified mode [ 'src/index.js', 420, 436 ]
+331 silly gunzTarPerm extractEntry src/node.js
+332 silly gunzTarPerm modified mode [ 'src/node.js', 420, 436 ]
+333 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/minimatch-0139366a/node_modules is being purged
+334 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/minimatch-0139366a/node_modules
+335 silly gunzTarPerm extractEntry bin/options.js
+336 silly gunzTarPerm modified mode [ 'bin/options.js', 420, 436 ]
+337 silly gunzTarPerm extractEntry bin/_mocha
+338 silly gunzTarPerm modified mode [ 'bin/_mocha', 493, 509 ]
+339 silly gunzTarPerm extractEntry History.md
+340 silly gunzTarPerm modified mode [ 'History.md', 420, 436 ]
+341 silly gunzTarPerm extractEntry Readme.md
+342 silly gunzTarPerm modified mode [ 'Readme.md', 420, 436 ]
+343 silly gunzTarPerm extractEntry bin/mocha
+344 silly gunzTarPerm modified mode [ 'bin/mocha', 493, 509 ]
+345 silly gunzTarPerm extractEntry bower.json
+346 silly gunzTarPerm modified mode [ 'bower.json', 420, 436 ]
+347 silly gunzTarPerm extractEntry images/error.png
+348 silly gunzTarPerm modified mode [ 'images/error.png', 420, 436 ]
+349 silly gunzTarPerm extractEntry images/ok.png
+350 silly gunzTarPerm modified mode [ 'images/ok.png', 420, 436 ]
+351 silly gunzTarPerm extractEntry lib/utils.js
+352 silly gunzTarPerm modified mode [ 'lib/utils.js', 420, 436 ]
+353 silly gunzTarPerm extractEntry lib/hook.js
+354 silly gunzTarPerm modified mode [ 'lib/hook.js', 420, 436 ]
+355 silly gunzTarPerm extractEntry lib/mocha.js
+356 silly gunzTarPerm modified mode [ 'lib/mocha.js', 420, 436 ]
+357 silly gunzTarPerm extractEntry lib/application.js
+358 silly gunzTarPerm modified mode [ 'lib/application.js', 420, 436 ]
+359 silly gunzTarPerm extractEntry lib/express.js
+360 silly gunzTarPerm modified mode [ 'lib/express.js', 420, 436 ]
+361 silly gunzTarPerm extractEntry lib/ms.js
+362 silly gunzTarPerm modified mode [ 'lib/ms.js', 420, 436 ]
+363 silly gunzTarPerm extractEntry lib/pending.js
+364 silly gunzTarPerm modified mode [ 'lib/pending.js', 420, 436 ]
+365 silly gunzTarPerm extractEntry lib/context.js
+366 silly gunzTarPerm modified mode [ 'lib/context.js', 420, 436 ]
+367 silly gunzTarPerm extractEntry lib/runnable.js
+368 silly gunzTarPerm modified mode [ 'lib/runnable.js', 420, 436 ]
+369 silly gunzTarPerm extractEntry lib/request.js
+370 silly gunzTarPerm modified mode [ 'lib/request.js', 420, 436 ]
+371 silly gunzTarPerm extractEntry lib/response.js
+372 silly gunzTarPerm modified mode [ 'lib/response.js', 420, 436 ]
+373 silly gunzTarPerm extractEntry lib/utils.js
+374 silly gunzTarPerm modified mode [ 'lib/utils.js', 420, 436 ]
+375 silly gunzTarPerm extractEntry lib/runner.js
+376 silly gunzTarPerm modified mode [ 'lib/runner.js', 420, 436 ]
+377 silly gunzTarPerm extractEntry lib/view.js
+378 silly gunzTarPerm modified mode [ 'lib/view.js', 420, 436 ]
+379 silly gunzTarPerm extractEntry lib/middleware/init.js
+380 silly gunzTarPerm modified mode [ 'lib/middleware/init.js', 420, 436 ]
+381 silly gunzTarPerm extractEntry lib/suite.js
+382 silly gunzTarPerm modified mode [ 'lib/suite.js', 420, 436 ]
+383 silly gunzTarPerm extractEntry lib/middleware/query.js
+384 silly gunzTarPerm modified mode [ 'lib/middleware/query.js', 420, 436 ]
+385 silly gunzTarPerm extractEntry lib/test.js
+386 silly gunzTarPerm modified mode [ 'lib/test.js', 420, 436 ]
+387 silly gunzTarPerm extractEntry lib/router/index.js
+388 silly gunzTarPerm modified mode [ 'lib/router/index.js', 420, 436 ]
+389 silly gunzTarPerm extractEntry lib/browser/debug.js
+390 silly gunzTarPerm modified mode [ 'lib/browser/debug.js', 420, 436 ]
+391 silly gunzTarPerm extractEntry lib/router/layer.js
+392 silly gunzTarPerm modified mode [ 'lib/router/layer.js', 420, 436 ]
+393 silly gunzTarPerm extractEntry lib/browser/events.js
+394 silly gunzTarPerm modified mode [ 'lib/browser/events.js', 420, 436 ]
+395 silly gunzTarPerm extractEntry lib/router/route.js
+396 silly gunzTarPerm modified mode [ 'lib/router/route.js', 420, 436 ]
+397 silly gunzTarPerm extractEntry lib/browser/progress.js
+398 silly gunzTarPerm modified mode [ 'lib/browser/progress.js', 420, 436 ]
+399 silly gunzTarPerm extractEntry lib/browser/tty.js
+400 silly gunzTarPerm modified mode [ 'lib/browser/tty.js', 420, 436 ]
+401 silly gunzTarPerm extractEntry lib/browser/.eslintrc.yaml
+402 silly gunzTarPerm modified mode [ 'lib/browser/.eslintrc.yaml', 420, 436 ]
+403 silly gunzTarPerm extractEntry lib/template.html
+404 silly gunzTarPerm modified mode [ 'lib/template.html', 420, 436 ]
+405 silly gunzTarPerm extractEntry lib/interfaces/bdd.js
+406 silly gunzTarPerm modified mode [ 'lib/interfaces/bdd.js', 420, 436 ]
+407 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/glob-fa5ee07b/node_modules is being purged
+408 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/glob-fa5ee07b/node_modules
+409 silly gunzTarPerm extractEntry lib/interfaces/common.js
+410 silly gunzTarPerm modified mode [ 'lib/interfaces/common.js', 420, 436 ]
+411 silly gunzTarPerm extractEntry lib/interfaces/exports.js
+412 silly gunzTarPerm modified mode [ 'lib/interfaces/exports.js', 420, 436 ]
+413 silly gunzTarPerm extractEntry lib/interfaces/index.js
+414 silly gunzTarPerm modified mode [ 'lib/interfaces/index.js', 420, 436 ]
+415 silly gunzTarPerm extractEntry lib/interfaces/qunit.js
+416 silly gunzTarPerm modified mode [ 'lib/interfaces/qunit.js', 420, 436 ]
+417 silly gunzTarPerm extractEntry lib/interfaces/tdd.js
+418 silly gunzTarPerm modified mode [ 'lib/interfaces/tdd.js', 420, 436 ]
+419 silly gunzTarPerm extractEntry lib/to-iso-string/LICENSE
+420 silly gunzTarPerm modified mode [ 'lib/to-iso-string/LICENSE', 420, 436 ]
+421 silly gunzTarPerm extractEntry lib/to-iso-string/index.js
+422 silly gunzTarPerm modified mode [ 'lib/to-iso-string/index.js', 420, 436 ]
+423 silly gunzTarPerm extractEntry lib/reporters/base.js
+424 silly gunzTarPerm modified mode [ 'lib/reporters/base.js', 420, 436 ]
+425 silly gunzTarPerm extractEntry lib/reporters/index.js
+426 silly gunzTarPerm modified mode [ 'lib/reporters/index.js', 420, 436 ]
+427 silly gunzTarPerm extractEntry lib/reporters/json-stream.js
+428 silly gunzTarPerm modified mode [ 'lib/reporters/json-stream.js', 420, 436 ]
+429 silly gunzTarPerm extractEntry lib/reporters/json.js
+430 silly gunzTarPerm modified mode [ 'lib/reporters/json.js', 420, 436 ]
+431 silly gunzTarPerm extractEntry lib/reporters/landing.js
+432 silly gunzTarPerm modified mode [ 'lib/reporters/landing.js', 420, 436 ]
+433 silly gunzTarPerm extractEntry lib/reporters/html.js
+434 silly gunzTarPerm modified mode [ 'lib/reporters/html.js', 420, 436 ]
+435 silly gunzTarPerm extractEntry lib/reporters/markdown.js
+436 silly gunzTarPerm modified mode [ 'lib/reporters/markdown.js', 420, 436 ]
+437 silly gunzTarPerm extractEntry lib/reporters/min.js
+438 silly gunzTarPerm modified mode [ 'lib/reporters/min.js', 420, 436 ]
+439 silly gunzTarPerm extractEntry lib/reporters/nyan.js
+440 silly gunzTarPerm modified mode [ 'lib/reporters/nyan.js', 420, 436 ]
+441 silly gunzTarPerm extractEntry lib/reporters/progress.js
+442 silly gunzTarPerm modified mode [ 'lib/reporters/progress.js', 420, 436 ]
+443 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/debug-e67ae33c/node_modules is being purged
+444 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/debug-e67ae33c/node_modules
+445 silly gunzTarPerm extractEntry lib/reporters/spec.js
+446 silly gunzTarPerm modified mode [ 'lib/reporters/spec.js', 420, 436 ]
+447 silly gunzTarPerm extractEntry lib/reporters/dot.js
+448 silly gunzTarPerm modified mode [ 'lib/reporters/dot.js', 420, 436 ]
+449 silly gunzTarPerm extractEntry lib/reporters/tap.js
+450 silly gunzTarPerm modified mode [ 'lib/reporters/tap.js', 420, 436 ]
+451 silly gunzTarPerm extractEntry lib/reporters/doc.js
+452 silly gunzTarPerm modified mode [ 'lib/reporters/doc.js', 420, 436 ]
+453 silly gunzTarPerm extractEntry lib/reporters/xunit.js
+454 silly gunzTarPerm modified mode [ 'lib/reporters/xunit.js', 420, 436 ]
+455 silly gunzTarPerm extractEntry lib/reporters/list.js
+456 silly gunzTarPerm modified mode [ 'lib/reporters/list.js', 420, 436 ]
+457 silly gunzTarPerm extractEntry mocha.css
+458 silly gunzTarPerm modified mode [ 'mocha.css', 420, 436 ]
+459 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/express-4ad93285/node_modules is being purged
+460 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/express-4ad93285/node_modules
+461 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/mocha-73c5e9c6/node_modules is being purged
+462 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/mocha-73c5e9c6/node_modules
+463 silly doParallel preinstall 5
+464 silly preinstall debug@2.6.8 /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/debug-e67ae33c
+465 info lifecycle debug@2.6.8~preinstall: debug@2.6.8
+466 silly preinstall minimatch@3.0.4 /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/minimatch-0139366a
+467 info lifecycle minimatch@3.0.4~preinstall: minimatch@3.0.4
+468 silly preinstall glob@7.1.1 /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/glob-fa5ee07b
+469 info lifecycle glob@7.1.1~preinstall: glob@7.1.1
+470 silly preinstall express@4.15.3 /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/express-4ad93285
+471 info lifecycle express@4.15.3~preinstall: express@4.15.3
+472 silly preinstall mocha@3.5.0 /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging/mocha-73c5e9c6
+473 info lifecycle mocha@3.5.0~preinstall: mocha@3.5.0
+474 silly lifecycle debug@2.6.8~preinstall: no script for preinstall, continuing
+475 silly lifecycle minimatch@3.0.4~preinstall: no script for preinstall, continuing
+476 silly lifecycle glob@7.1.1~preinstall: no script for preinstall, continuing
+477 silly lifecycle express@4.15.3~preinstall: no script for preinstall, continuing
+478 silly lifecycle mocha@3.5.0~preinstall: no script for preinstall, continuing
+479 silly doReverseSerial remove 0
+480 silly doSerial move 0
+481 silly doSerial finalize 5
+482 silly finalize /media/bootcamp/933C-C67F/greetings-webapp/node_modules/mocha/node_modules/debug
+483 silly finalize /media/bootcamp/933C-C67F/greetings-webapp/node_modules/mocha/node_modules/minimatch
+484 silly finalize /media/bootcamp/933C-C67F/greetings-webapp/node_modules/mocha/node_modules/glob
+485 silly finalize /media/bootcamp/933C-C67F/greetings-webapp/node_modules/express
+486 silly finalize /media/bootcamp/933C-C67F/greetings-webapp/node_modules/mocha
+487 silly doSerial build 5
+488 silly build debug@2.6.8
+489 info linkStuff debug@2.6.8
+490 silly linkStuff debug@2.6.8 has /media/bootcamp/933C-C67F/greetings-webapp/node_modules/mocha/node_modules as its parent node_modules
+491 verbose linkBins debug@2.6.8
+492 verbose linkMans debug@2.6.8
+493 silly build minimatch@3.0.4
+494 info linkStuff minimatch@3.0.4
+495 silly linkStuff minimatch@3.0.4 has /media/bootcamp/933C-C67F/greetings-webapp/node_modules/mocha/node_modules as its parent node_modules
+496 verbose linkBins minimatch@3.0.4
+497 verbose linkMans minimatch@3.0.4
+498 silly build glob@7.1.1
+499 info linkStuff glob@7.1.1
+500 silly linkStuff glob@7.1.1 has /media/bootcamp/933C-C67F/greetings-webapp/node_modules/mocha/node_modules as its parent node_modules
+501 verbose linkBins glob@7.1.1
+502 verbose linkMans glob@7.1.1
+503 silly build express@4.15.3
+504 info linkStuff express@4.15.3
+505 silly linkStuff express@4.15.3 has /media/bootcamp/933C-C67F/greetings-webapp/node_modules as its parent node_modules
+506 verbose linkBins express@4.15.3
+507 verbose linkMans express@4.15.3
+508 silly build mocha@3.5.0
+509 info linkStuff mocha@3.5.0
+510 silly linkStuff mocha@3.5.0 has /media/bootcamp/933C-C67F/greetings-webapp/node_modules as its parent node_modules
+511 verbose linkBins mocha@3.5.0
+512 verbose link bins [ { mocha: './bin/mocha', _mocha: './bin/_mocha' },
+512 verbose link bins   '/media/bootcamp/933C-C67F/greetings-webapp/node_modules/.bin',
+512 verbose link bins   false ]
+513 verbose linkMans mocha@3.5.0
+514 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.bin/mocha is being purged
+515 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.bin/mocha
+516 silly gentlyRm /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.bin/_mocha is being purged
+517 verbose gentlyRm don't care about contents; nuking /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.bin/_mocha
+518 verbose unlock done using /home/bootcamp/.npm/_locks/staging-e360bd5d73058bf9.lock for /media/bootcamp/933C-C67F/greetings-webapp/node_modules/.staging
+519 silly rollbackFailedOptional Starting
+520 silly rollbackFailedOptional Finishing
+521 silly runTopLevelLifecycles Starting
+522 silly runTopLevelLifecycles Finishing
+523 silly install printInstalled
+524 warn greetings-webapp@1.0.0 No description
+525 warn greetings-webapp@1.0.0 No repository field.
+526 verbose stack Error: EPERM: operation not permitted, symlink '../mocha/bin/mocha' -> '/media/bootcamp/933C-C67F/greetings-webapp/node_modules/.bin/mocha'
+526 verbose stack     at Error (native)
+527 verbose cwd /media/bootcamp/933C-C67F/greetings-webapp
+528 error Linux 4.4.0-89-generic
+529 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install"
+530 error node v4.2.6
+531 error npm  v3.5.2
+532 error path ../mocha/bin/mocha
+533 error code EPERM
+534 error errno -1
+535 error syscall symlink
+536 error Error: EPERM: operation not permitted, symlink '../mocha/bin/mocha' -> '/media/bootcamp/933C-C67F/greetings-webapp/node_modules/.bin/mocha'
+536 error     at Error (native)
+536 error  { [Error: EPERM: operation not permitted, symlink '../mocha/bin/mocha' -> '/media/bootcamp/933C-C67F/greetings-webapp/node_modules/.bin/mocha']
+536 error   errno: -1,
+536 error   code: 'EPERM',
+536 error   syscall: 'symlink',
+536 error   path: '../mocha/bin/mocha',
+536 error   dest: '/media/bootcamp/933C-C67F/greetings-webapp/node_modules/.bin/mocha',
+536 error   parent: 'greetings-webapp' }
+537 error Please try running this command again as root/Administrator.
+538 verbose exit [ -1, true ]

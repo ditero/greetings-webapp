@@ -18,6 +18,6 @@
     "express3-handlebars": "^0.5.2",
     "mocha": "^3.4.2",
     "mongodb": "^2.2.30",
-    "mongoose": "^4.11.5"
+    "mongoose": "^4.11.6"
   }
 }

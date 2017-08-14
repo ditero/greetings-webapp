@@ -9,7 +9,7 @@ html, body {
   margin: 50px auto;
   padding: 0 10px;
   background-color: #14213D;
-   border-style: solid;
+  border-style: solid;
   border-top-width: 5px;
   border-color: #14213D;
   border: 2px solid #FFF;
@@ -18,7 +18,9 @@ html, body {
   background-image: -webkit-linear-gradient(#90BFF0, #BC1324);
 
 }
-
+#mainOptions{
+  margin-top: -4%;
+}
 h1{
   text-align: center;
   color: firebrick;
@@ -48,16 +50,19 @@ h1{
   color: #FFF !important;
 }
 h2{
-  margin-right: 25%;
+  margin-right: 92%;
   text-align: right;
   display: block;
   color: #FFF !important;
   font-size: 30px;
   border-bottom: 100%;
+  border-color: #FFF;
 }
 input[type='text'] {
   width:260px;
   margin: 0 33%;
+  margin-bottom: 2.5%;
+  margin-top: 0%;
 
 }
 
@@ -66,15 +71,16 @@ input[type='submit'] {
   width:25%;
   margin: 5% auto;
 }
+
 .radio{
   align-content:  center;
   display:inline;
   margin: 15% auto;
   width:20px;
 }
-.keepTrk{
-    margin-right: 40px;
-    color: #FFF !important;
+#resetBtn{
+    margin-right: 10%;
+    width: 15%;
 }
 p{
   color: #FFF;
