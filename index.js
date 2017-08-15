@@ -38,7 +38,8 @@ app.use(flash());
  app.post('/greetings', greetUsersRoutes.greet);
  app.get('/', greetUsersRoutes.greetScreen);
  app.get('/greeted', greetUsersRoutes.greeted);
- app.get('/counter/:user', greetUsersRoutes.countGreetings);
+ app.get('/reset', greetUsersRoutes.resetCounter);
+  app.get('/counter/:user', greetUsersRoutes.countGreetings);
 
 
 

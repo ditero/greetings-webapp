@@ -71,7 +71,10 @@ module.exports = function(models) {
       models.Users.create(user, function(err, results) {
         if (err) {
           if (err.code === 11000) {
-            // req.flash('error', 'Welcome back');
+            req.flash('error', 'Welcome back');
+            greetedUsers.push(user.name);
+            res.redirect('/');
+
           } else {
             return next(err);
           }
@@ -81,6 +84,7 @@ module.exports = function(models) {
             if (err) {
               return next(err);
             } else {
+              greetedUsers.push(user.name);
               res.render('myusers/greet', {
                 output: myChoice,
                 countGreeted: enteredNames.length
@@ -95,9 +99,7 @@ module.exports = function(models) {
       // }
 
     }
-    console.log(user.name);
 
-    //greetedUsers.push(user.name);
 
   } //End Of Greet Function
 
@@ -130,16 +132,27 @@ module.exports = function(models) {
     });
 
   }
-const resetCounter = function(req, res){
-  models.Users.remove(user, function(err, results){
+  const resetCounter = function(req, res, next) {
+    greetedUsers = [];
+    models.Users.remove({}).exec(function(err, results) {
+      if (err) {
+        return next(err);
+      } else {
+        findCollection(function(err, results) {
+          res.render("myusers/greet", {
+            countGreeted: results.length
+          });
+        });
+      }
 
-  })
-}
+    });
+  }
   return {
     greet,
     index,
     greeted,
     countGreetings,
-    greetScreen
+    greetScreen,
+    resetCounter
   }
 }
