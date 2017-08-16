@@ -16,7 +16,7 @@ module.exports = function(models) {
   const index = function(req, res) {
     res.render('myusers/index');
   };
-  var convertText = function(name) {
+  var convertText = function(userName) {
     var userName = name.substring(0, 1).toUpperCase() + "" + name.substring(1).toLowerCase()
     return userName;
   };
@@ -44,18 +44,29 @@ module.exports = function(models) {
   };
 
   /////////////////////GREET SCREEN PAGE////////////////////////////
-  const greetScreen = function(req, res) {
-    findCollection(function(err, results){
-      res.render("myusers/greet", {
-        countGreeted: results.length
-      });
+  const greetScreen = function(req, res, next) {
+    models.Users.count()
+    .exec(function(err, results){
+      if (err) {
+        return next(err);
+      }else {
+        res.render("myusers/greet", {
+          countGreeted: results
+        });
+      }
     });
+    // findCollection(function(err, results){
+    //   res.render("myusers/greet", {
+    //     countGreeted: results.length
+    //   });
+    // });
   };
 
   //////GREET FUNCTION: RESPONDS AND PUSHES NAMES TO AN ARRAY///////
   const greet = function(req, res, next) {
     var user = {
-      name: req.body.user
+      name: req.body.user,
+      count: 1
     };
 
     var selectedRadio = req.body.selectedRadio;
@@ -71,6 +82,13 @@ module.exports = function(models) {
       models.Users.create(user, function(err, results) {
         if (err) {
           if (err.code === 11000) {
+            models.Users.findOne({name:user.name})
+            .exec(function(err, results){
+              if (results) {
+                results.count = results.count + 1;
+                results.save();
+              }
+            });
             req.flash('error', 'Welcome back');
             greetedUsers.push(user.name);
             res.redirect('/');
@@ -104,19 +122,27 @@ module.exports = function(models) {
   } //End Of Greet Function
 
   /////////////COUNTGREETINGS FUNCTION: COUNTS HOW TIMES A USER HAS BEEN GREETED///////
-  const countGreetings = function(req, res) {
+  const countGreetings = function(req, res, next) {
     var count = 0;
     var user = req.params.user;
-    user = convertText(user);
-    for (var i = 0; i < greetedUsers.length; i++) {
-      if (user === greetedUsers[i]) {
-        count++;
+    //user = convertText(user);
+    models.Users.findOne({name: req.params.user})
+    .exec(function(err, results){
+      if (err) {
+        return next(err);
+      }else {
+        var thisUser = 'Hello, ' + results.name + ' is greeted for the ' + results.count + ' time(s)'
+
+        res.render('myusers/countGreetings', {
+          thisUser: thisUser
+        });
       }
-    }
-    var thisUser = 'Hello, ' + user + ' is greeted for the ' + count + ' time(s)'
-    res.render('myusers/countGreetings', {
-      thisUser: thisUser
     });
+    // for (var i = 0; i < greetedUsers.length; i++) {
+    //   if (user === greetedUsers[i]) {
+    //     count++;
+    //   }
+    // }
 
   }
 
