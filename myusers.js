@@ -34,8 +34,8 @@ module.exports = function(models) {
 
   ////////////////////////////FIND NAMES FROM MONGOOSE DATABASE//////////////////////////////////
   var findCollection = function(cb) {
-    models.Users.find({}).exec(function(err, results){
-      if (err){
+    models.Users.find({}).exec(function(err, results) {
+      if (err) {
         return cb(err);
       }
       var names = getNames(results);
@@ -46,15 +46,15 @@ module.exports = function(models) {
   /////////////////////GREET SCREEN PAGE////////////////////////////
   const greetScreen = function(req, res, next) {
     models.Users.count()
-    .exec(function(err, results){
-      if (err) {
-        return next(err);
-      }else {
-        res.render("myusers/greet", {
-          countGreeted: results
-        });
-      }
-    });
+      .exec(function(err, results) {
+        if (err) {
+          return next(err);
+        } else {
+          res.render("myusers/greet", {
+            countGreeted: results
+          });
+        }
+      });
     // findCollection(function(err, results){
     //   res.render("myusers/greet", {
     //     countGreeted: results.length
@@ -82,13 +82,15 @@ module.exports = function(models) {
       models.Users.create(user, function(err, results) {
         if (err) {
           if (err.code === 11000) {
-            models.Users.findOne({name:user.name})
-            .exec(function(err, results){
-              if (results) {
-                results.count = results.count + 1;
-                results.save();
-              }
-            });
+            models.Users.findOne({
+                name: user.name
+              })
+              .exec(function(err, results) {
+                if (results) {
+                  results.count = results.count + 1;
+                  results.save();
+                }
+              });
             req.flash('error', 'Welcome back');
             greetedUsers.push(user.name);
             res.redirect('/');
@@ -96,8 +98,7 @@ module.exports = function(models) {
           } else {
             return next(err);
           }
-        }
-        else {
+        } else {
           findCollection(function(err, enteredNames) {
             if (err) {
               return next(err);
@@ -120,29 +121,50 @@ module.exports = function(models) {
 
 
   } //End Of Greet Function
-
+  const findCountPerUser = function(cb, name) {
+    models.Users.findOne({
+        name: name
+      })
+      .exec(function(err, results) {
+        if (err) {
+          return cb(err);
+        } else {
+          cb(null, results);
+        }
+      });
+  }
   /////////////COUNTGREETINGS FUNCTION: COUNTS HOW TIMES A USER HAS BEEN GREETED///////
   const countGreetings = function(req, res, next) {
-    var count = 0;
     var user = req.params.user;
     //user = convertText(user);
-    models.Users.findOne({name: req.params.user})
-    .exec(function(err, results){
-      if (err) {
-        return next(err);
-      }else {
-        var thisUser = 'Hello, ' + results.name + ' is greeted for the ' + results.count + ' time(s)'
-
-        res.render('myusers/countGreetings', {
-          thisUser: thisUser
-        });
-      }
-    });
-    // for (var i = 0; i < greetedUsers.length; i++) {
-    //   if (user === greetedUsers[i]) {
-    //     count++;
+    // findCountPerUser(function(err, results){
+    //   if (err) {
+    //     return next(err);
+    //   }else {
+    //     var thisUser = 'Hello, ' + user + ' is greeted for the ' + results.count + ' time(s)'
+    //
+    //     res.render('myusers/countGreetings', {
+    //       thisUser: thisUser
+    //     });
+    //
     //   }
-    // }
+    //
+    // }, user);
+    models.Users.findOne({
+        name: user
+      })
+      .exec(function(err, results) {
+        if (err) {
+          return next(err);
+        } else {
+          var countMyGreetings = results.count
+          var thisUser = 'Hello, ' + user + ' is greeted for the ' + countMyGreetings + ' time(s)'
+
+          res.render('myusers/countGreetings', {
+            thisUser: thisUser
+          });
+        }
+      });
 
   }
 
@@ -151,7 +173,7 @@ module.exports = function(models) {
   ////////////////GREETED FUNCTION: RESPONDS WITH THE LIST OF GREETED USERS THAT HAVE LINKS/////
   const greeted = function(req, res) {
 
-    findCollection(function(err, names){
+    findCollection(function(err, names) {
       res.render('myusers/index', {
         myusers: names
       });
