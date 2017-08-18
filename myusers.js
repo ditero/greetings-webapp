@@ -16,9 +16,10 @@ module.exports = function(models) {
   const index = function(req, res) {
     res.render('myusers/index');
   };
-  var convertText = function(userName) {
-    var userName = name.substring(0, 1).toUpperCase() + "" + name.substring(1).toLowerCase()
-    return userName;
+  var convertName = function(reqName) {
+
+    var name = reqName.substring(0, 1).toUpperCase() + "" + reqName.substring(1).toLowerCase()
+    return name;
   };
 
   /////////////////////////Generate names Only from the Database collection/////////////////////////
@@ -55,17 +56,12 @@ module.exports = function(models) {
           });
         }
       });
-    // findCollection(function(err, results){
-    //   res.render("myusers/greet", {
-    //     countGreeted: results.length
-    //   });
-    // });
   };
 
   //////GREET FUNCTION: RESPONDS AND PUSHES NAMES TO AN ARRAY///////
   const greet = function(req, res, next) {
     var user = {
-      name: req.body.user,
+      name: convertName(req.body.user),
       count: 1
     };
 
@@ -113,10 +109,6 @@ module.exports = function(models) {
         }
       });
 
-      // if (!foundUser) {
-      //   uniqueList.push(user.name);
-      // }
-
     }
 
 
@@ -136,20 +128,6 @@ module.exports = function(models) {
   /////////////COUNTGREETINGS FUNCTION: COUNTS HOW TIMES A USER HAS BEEN GREETED///////
   const countGreetings = function(req, res, next) {
     var user = req.params.user;
-    //user = convertText(user);
-    // findCountPerUser(function(err, results){
-    //   if (err) {
-    //     return next(err);
-    //   }else {
-    //     var thisUser = 'Hello, ' + user + ' is greeted for the ' + results.count + ' time(s)'
-    //
-    //     res.render('myusers/countGreetings', {
-    //       thisUser: thisUser
-    //     });
-    //
-    //   }
-    //
-    // }, user);
     models.Users.findOne({
         name: user
       })
@@ -169,7 +147,6 @@ module.exports = function(models) {
   }
 
 
-
   ////////////////GREETED FUNCTION: RESPONDS WITH THE LIST OF GREETED USERS THAT HAVE LINKS/////
   const greeted = function(req, res) {
 
@@ -182,17 +159,13 @@ module.exports = function(models) {
   }
   const resetCounter = function(req, res, next) {
     greetedUsers = [];
-    models.Users.remove({}).exec(function(err, results) {
+    models.Users.remove({}).
+    exec(function(err, results) {
       if (err) {
         return next(err);
       } else {
-        findCollection(function(err, results) {
-          res.render("myusers/greet", {
-            countGreeted: results.length
-          });
-        });
+        res.redirect("/");
       }
-
     });
   }
   return {
