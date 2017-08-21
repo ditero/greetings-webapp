@@ -6,7 +6,8 @@ module.exports = function(mongoURL){
 
   const UsersSchema = mongoose.Schema({
     name : String,
-    count : Number
+    count : Number,
+    mylist : Number
   });
   UsersSchema.index({name : 1}, {unique : true});
 

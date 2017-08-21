@@ -1,39 +1,55 @@
 <!-- INPUT DATA  -->
 
 <div id="countPanel">
-  <h2 id="keepTrk" class="panel-primary" name='greetCount' value=0>{{countGreeted}}</h2>
-  <a href="/reset"><input type="button" id="resetBtn" class="btn btn-secondary" name="resetBtn" value="Reset Count" readonly="readonly">
-</a></div>
+  <div class="center-block">
+    <h2 id="keepTrk" class="" name='greetCount' value=0>{{countGreeted}}</h2>
+  </div>
 
-<form class="text-center" action="/greetings" method="post">
-  <div id="mainOptions" class="text-center">
-    <input  type="text" class="form-control tex-center" name="user" placeholder="Type your name here">
-    <div class="btn-group" data-toggle="buttons">
+<a href="/reset"><input type="button" id="resetBtn" class="btn btn-primary" name="resetBtn" value="Reset Count">
+</a>
+<a href="/greeted"><input type="button" class="btn btn-info" value="Show Names"></a>
+</div>
+
+<div class="row">
+<div class="col-md-4"></div>
+
+<form class="center-block text-center form-horizontal" action="/greetings" method="post">
+  <div id="mainOptions" class="control-group">
+    <label for="textInput" class="text-left">LET'S GREET</label>
+    <input  type="text" class="form-control tex-center" id="textInput" name="user" placeholder="Type your name here">
+    <br>
+    <div id="radioBtns"class="btn-group">
       <label class="btn btn-primary">
-    <input type="radio" name="selectedRadio" id="option1" name="selectedRadio" value="Hello">English
-  </label>
+        <input type="radio" name="selectedRadio" id="option1" name="selectedRadio" value="Hello">English
+      </label>
       <label class="btn btn-primary">
-    <input type="radio" name="selectedRadio" id="option2" name="selectedRadio" value="Goeie more"> Afrikaans
-  </label>
+        <input type="radio" name="selectedRadio" id="option2" name="selectedRadio" value="Goeie more"> Afrikaans
+      </label>
       <label class="btn btn-primary">
-    <input type="radio" name="selectedRadio" id="option3" name="selectedRadio" value="Molo"> IsiXhosa
-  </label>
+        <input type="radio" name="selectedRadio" id="option3" name="selectedRadio" value="Molo"> IsiXhosa
+      </label>
     </div>
   </div>
 
-  <div class="btn-group-main">
-    <input type="submit" class="btn btn-success text-center" value="Greet Me">
-    <a href="/greeted"><input class="btn btn-success text-center" value="View greeted Names" readonly="readonly"></a>
+  {{#if messages.error }}
+  <div class="text-danger error text-center">
+    {{messages.error}}
   </div>
+  {{/if}}
+  <br>
+  <div >
+    <input type="submit" class="btn btn-primary btn-md btn-block text-center" value="Greet Me">
+  </div>
+  <br>
+  <p class="text-center">{{output}}</p>
 
 </form>
 
-{{#if messages.error }}
-  <div class="error text-center">
-    {{messages.error}}
-  </div>
-{{/if}}
+
+</div>
+
+
 
 {{#if output}}
-  <p class="text-center">{{output}}</p>
+
 {{/if}}
