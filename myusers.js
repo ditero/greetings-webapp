@@ -4,6 +4,7 @@ module.exports = function(models) {
     res.render('myusers/index');
   };
 
+
   var convertName = function(reqName) {
     var name = reqName.substring(0, 1).toUpperCase() + "" + reqName.substring(1).toLowerCase()
     return name;
@@ -61,9 +62,17 @@ module.exports = function(models) {
                   results.save();
                 }
               });
+
             // req.flash('error', 'Welcome back');
-            res.render('myusers/greet', {
-              output: myChoice
+            findCollection(function(err, enteredNames) {
+              if (err) {
+                return next(err);
+              } else {
+                res.render('myusers/greet', {
+                  output: myChoice,
+                  countGreeted: enteredNames.length
+                });
+              }
             });
             // res.redirect('/');
 
@@ -89,18 +98,6 @@ module.exports = function(models) {
     }
   } //End Of Greet Function
 
-  const findCountPerUser = function(cb, name) {
-    models.Users.findOne({
-        name: name
-      })
-      .exec(function(err, results) {
-        if (err) {
-          return cb(err);
-        } else {
-          cb(null, results);
-        }
-      });
-  }
   /////////////COUNTGREETINGS FUNCTION: COUNTS HOW TIMES A USER HAS BEEN GREETED///////
   const countGreetings = function(req, res, next) {
     var user = req.params.user;
