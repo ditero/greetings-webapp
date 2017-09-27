@@ -13,7 +13,7 @@ describe('models should be able to store greeted names', function(){
 
       }else {
         assert.ok(err, "Successfully stored on the DB");
-        done()
+        //done()
       }
 
     });
