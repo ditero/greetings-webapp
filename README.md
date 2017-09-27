@@ -14,10 +14,10 @@
 - License
 
 # Title: 
-## Registration Numbers Webapp
+## Greetings Webapp
 
 ## Synopsis
-This porject is a web application that displays a registration number plate. The number plate should have a rounded corners, a black border and a yellow or silver-grey background. Users should be able to type in a url http://localhost:3001/reg_number/CY 123 345 that should display a registration number for CY 123 345. A user should be able to enter any registration number as the last part of the URL.
+This project allows the user to greet in different languages by entering user's name on the text field and selecting the language of your choice on the radio buttons. It also counts how many names have been greeted in total, counts the number of times a user has been greeted for and store the names on MongoDB as you greet. 
 
 # Getting Started
 |||||||||||||||||||||
