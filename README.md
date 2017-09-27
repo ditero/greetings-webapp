@@ -26,10 +26,10 @@ You need to fork this repository. I will assume that you already have an account
 1. On Github, navigate to your fork of this respository.
 2. Under the respository name, click **Clone or download**.
 3. In the Clone with HTTPs section,click the copy icon to copy the clone URL for the repository.
-4. OPen Terminal
+4. Open Terminal
 5. Type `git clone` and then paste the URL you copied in Step 2. It will look like this, with your 
   GitHub username instead of `YOUR-USERNAME`as shown below:
-  `~$ git clone https://github.com/YOU-USERNAME/Creetings-webapp`
+  `~$ git clone https://github.com/YOUR-USERNAME/Creetings-webapp`
 6. Press **Enter**. Your local clone will be created.
 
 # Installing
