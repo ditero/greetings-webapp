@@ -1,4 +1,4 @@
-# Content
+# Table of Content
 - Project Title
 - Introduction
 - Getting Started
@@ -22,10 +22,13 @@ This project allows the user to greet in different languages by entering user's 
 # Getting Started
 You need to fork this repository. I will assume that you already have an account with Github and logged in.
 
-##Steps on creating a clone of your for fork
+## Steps on creating a clone of your for fork
 1. On Github, navigate to your fork of this respository.
 2. Under the respository name, click **Clone or download**.
-3. In the Clone with HTTPs section,click 
+3. In the Clone with HTTPs section,click the copy icon to copy the clone URL for the repository.
+4. OPen Terminal
+5. Type `git clone` and then paste the URL you copied in Step 2. It will look like this, with your GitHub username instead of
+
 # Installing
 |||||||||||||||||||||||||||||
 #  Running the Web Application
