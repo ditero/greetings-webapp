@@ -21,12 +21,12 @@ This project allows the user to greet in different languages by entering user's 
 
 # Getting Started
 |||||||||||||||||||||
+# Installing
+|||||||||||||||||||||||||||||
 #  Running the Web Application
 |||||||||||||||||||||||||||||
 #  Example
 ||||||||||||||||||||||||||||||
-# Installing
-|||||||||||||||||||||||||||||
 # Running the tests
 |||||||||||||||||||||||||||||||
 # Break down into end to end tests
