@@ -6,7 +6,6 @@
 - Running the Web Application
 - Example
 - Running the tests
-- Break down into end to end tests
 - Deployment
 - Built with
 - Contributing
@@ -72,9 +71,12 @@ The application will run on the browser like this:
 [logo2]: https://github.com/ditero/greetings-webapp/blob/master/runningapp.png "Greetings App"
 
 # Running the tests
-|||||||||||||||||||||||||||||||
-# Break down into end to end tests
-||||||||||||||||||||||||||||||
+Click on the Travis Test link to see the passing online ![BuildStatus](https://travis-ci.org/ditero/greetings-webapp)
+TO run the test locally you need run any of the following commands:
+```bash
+  mocha
+  npm test
+  ```
 # Deployment
 ||||||||||||||||||||||||||||
 # Built with
