@@ -77,7 +77,7 @@ The application will run on the browser like this:
   npm test
   ```
 # Contributing
-You are welcome to contribute and please send me an issue to your forked repository, so I can have look at your updated features fo this Application.
+You are welcome to contribute and please send me an issue to your forked repository, so I can have look at your updated features of this Application.
 
 # Author
 Anele Sigenu
