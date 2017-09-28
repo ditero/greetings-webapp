@@ -33,7 +33,7 @@ You need to fork this repository. I will assume that you already have an account
 
 # Installing
 Before running this Application you have to make sure make sure that you have 
-[npm](https://www.npmjs.com/get-npm), [nodejs](http://nodejs.org) and [MongoDB](https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-16.04/) installed first.
+[npm](https://www.npmjs.com/get-npm), [nodejs](http://nodejs.org) and [MongoDB](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-mongodb-on-ubuntu-16-04) installed first.
 
 ```bash
 # Check if you have these installed by running the following commands:
