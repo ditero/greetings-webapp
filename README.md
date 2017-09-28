@@ -57,10 +57,9 @@ After completing the installtion of dependencies you can run the Application by 
 nodemon
 ````
 You should see something like this:
-Reference-style: 
 ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: https://github.com/ditero/greetings-webapp/blob/master/runningnodemon.png "Terminal"
 
 #  Example
 ||||||||||||||||||||||||||||||
