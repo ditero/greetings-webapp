@@ -67,9 +67,9 @@ Now its time run it from the browser by typing; localhost:5000 on the Address Ba
 The application will run on the browser like this:
 
 
-![alt text][logo]
+![alt text][logo2]
 
-[logo]: https://github.com/ditero/greetings-webapp/blob/master/runningapp.png "Greetings App"
+[logo2]: https://github.com/ditero/greetings-webapp/blob/master/runningapp.png "Greetings App"
 
 # Running the tests
 |||||||||||||||||||||||||||||||
