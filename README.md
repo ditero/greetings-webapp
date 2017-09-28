@@ -1,4 +1,4 @@
-# Table of Content
+# Table of Contents
 - Project Title
 - Introduction
 - Getting Started
@@ -61,8 +61,16 @@ You should see something like this:
 
 [logo]: https://github.com/ditero/greetings-webapp/blob/master/runningnodemon.png "Terminal"
 
+Now its time run it from the browser by typing; localhost:5000 on the Address Bar.
+
 #  Example
-||||||||||||||||||||||||||||||
+The application will run on the browser like this:
+
+
+![alt text][logo]
+
+[logo]: https://github.com/ditero/greetings-webapp/blob/master/runningapp.png "Greetings App"
+
 # Running the tests
 |||||||||||||||||||||||||||||||
 # Break down into end to end tests
