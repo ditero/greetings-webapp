@@ -6,8 +6,6 @@
 - Running the Web Application
 - Example
 - Running the tests
-- Deployment
-- Built with
 - Contributing
 - Author
 - License
@@ -22,9 +20,9 @@ This project allows the user to greet in different languages by entering user's 
 You need to fork this repository. I will assume that you already have an account with Github and logged in.
 
 ## Steps on creating a clone of your fork
-1. On Github, navigate to your fork of this respository.
-2. Under the respository name, click **Clone or download**.
-3. In the Clone with HTTPs section,click the copy icon to copy the clone URL for the repository.
+1. On Github, navigate to your fork of this repository.
+2. Under the repository name, click **Clone or download**.
+3. In the Clone with HTTPs section, click the copy icon to copy the clone URL for the repository.
 4. Open Terminal
 5. Type `git clone` and then paste the URL you copied in Step 2. It will look like this, with your 
   GitHub username instead of `YOUR-USERNAME`as shown below:
@@ -51,7 +49,7 @@ npm install
 
 ```
 #  Running the Web Application
-After completing the installtion of dependencies you can run the Application by running the followign command:
+After completing the installation of dependencies you can run the Application by running the following command:
 ```bash
 nodemon
 ````
@@ -60,7 +58,7 @@ You should see something like this:
 
 [logo]: https://github.com/ditero/greetings-webapp/blob/master/runningnodemon.png "Terminal"
 
-Now its time run it from the browser by typing; localhost:5000 on the Address Bar.
+Now it's time run it from the browser by typing; localhost:5000 on the Address Bar.
 
 #  Example
 The application will run on the browser like this:
@@ -78,14 +76,11 @@ The application will run on the browser like this:
   mocha
   npm test
   ```
-# Deployment
-||||||||||||||||||||||||||||
-# Built with
-|||||||||||||||||||||||||||
 # Contributing
-||||||||||||||||||||||||||||||
+You are welcome to contribute and please send me an issue to your forked repository, so I can have look at your updated features fo this Application.
+
 # Author
 Anele Sigenu
-Email: anele@projectcodex.co
+
 # License
 MIT Licensed
