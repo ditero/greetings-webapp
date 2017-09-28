@@ -34,7 +34,7 @@ You need to fork this repository. I will assume that you already have an account
 
 # Installing
 Before running this Application you have to make sure make sure that you have 
-[npm](https://www.npmjs.com/get-npm), [nodejs](http://nodejs.org) and [MongoDb](https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-16.04/) installed first.
+[npm](https://www.npmjs.com/get-npm), [nodejs](http://nodejs.org) and [MongoDB](https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-16.04/) installed first.
 
 ```bash
 # Check if you have these installed by running the following commands:
@@ -57,7 +57,10 @@ After completing the installtion of dependencies you can run the Application by 
 nodemon
 ````
 You should see something like this:
-(https://github.com/ditero/greetings-webapp/blob/master/runningnodemon.png)
+Reference-style: 
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 #  Example
 ||||||||||||||||||||||||||||||
