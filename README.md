@@ -33,9 +33,32 @@ You need to fork this repository. I will assume that you already have an account
 6. Press **Enter**. Your local clone will be created.
 
 # Installing
-|||||||||||||||||||||||||||||
+Before running this Application you have to make sure make sure that you have 
+[npm](https://www.npmjs.com/get-npm), [nodejs](http://nodejs.org) and [MongoDb](https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-16.04/) installed first.
+
+```bash
+# Check if you have these installed by running the following commands:
+
+node -v
+npm -v
+mongo -version
+
+# You may have to do sudo npm install depending on your system
+
+```
+If you have the above packages installed in your system, now you need to install all the dependencies of this application by running the following command:
+```bash
+npm install
+
+```
 #  Running the Web Application
-|||||||||||||||||||||||||||||
+After completing the installtion of dependencies you can run the Application by running the followign command:
+```bash
+nodemon
+````
+You should see something like this:
+(https://github.com/ditero/greetings-webapp/blob/master/runningnodemon.png)
+
 #  Example
 ||||||||||||||||||||||||||||||
 # Running the tests
