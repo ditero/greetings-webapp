@@ -71,7 +71,7 @@ The application will run on the browser like this:
 [logo2]: https://github.com/ditero/greetings-webapp/blob/master/runningapp.png "Greetings App"
 
 # Running the tests
-![BuildStatus](https://travis-ci.org/ditero/greetings-webapp)
+![BuildStatus](https://travis-ci.org/ditero/greetings-webapp.svg?branch=master)
 - Click on the Travis Test link above, to see the tests passing online 
 - To run the test locally you need run any of the following commands:
 ```bash
