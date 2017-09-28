@@ -26,8 +26,9 @@ You need to fork this repository. I will assume that you already have an account
 4. Open Terminal
 5. Type `git clone` and then paste the URL you copied in Step 2. It will look like this, with your 
   GitHub username instead of `YOUR-USERNAME`as shown below:
-  `~$ git clone https://github.com/YOUR-USERNAME/Creetings-webapp`
+  `~$ git clone https://github.com/YOUR-USERNAME/greetings-webapp`
 6. Press **Enter**. Your local clone will be created.
+7. Navigate to the repository by running `cd greetings-webapp`
 
 # Installing
 Before running this Application you have to make sure make sure that you have 
